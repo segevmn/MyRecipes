@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:text="@string/title1"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="41dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="100dp"
+            android:layout_width="316dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:inputType="textPersonName"
@@ -53,17 +53,27 @@
             android:text="@string/press_me" />
     </LinearLayout>
 
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="550dp"
+        tools:layout_editor_absoluteY="156dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="3dp"
+        android:layout_height="250dp"
+        android:background="@color/purple_700"
+        tools:layout_editor_absoluteX="364dp"
+        tools:layout_editor_absoluteY="145dp" />
+
     <LinearLayout
-        android:layout_width="331dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="188dp"
-        android:layout_marginEnd="111dp"
+        android:layout_width="116dp"
+        android:layout_height="157dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="176dp">
 
         <CheckBox
             android:id="@+id/checkBox"
@@ -82,28 +92,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option3" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/purple_700" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alternative1" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alternative2" />
-        </RadioGroup>
     </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="142dp"
+        android:layout_height="113dp"
+        tools:layout_editor_absoluteX="417dp"
+        tools:layout_editor_absoluteY="196dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alternative1" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alternative2" />
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

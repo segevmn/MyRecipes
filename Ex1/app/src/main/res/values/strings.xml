@@ -3,4 +3,5 @@
     <string name="title1">This activity demonstrates the use of relative layout with two internal Linear layouts</string>
     <string name="name_lable">Your Name:</string>
     <string name="press_me">Press me!</string>
+    <string name="title2">This activity demonstrates the use of frame layout with multiple object on top of each other</string>
 </resources>

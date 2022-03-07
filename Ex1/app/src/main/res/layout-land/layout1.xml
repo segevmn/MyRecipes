@@ -10,26 +10,30 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="296dp"
         android:gravity="center"
         android:text="@string/title1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="41dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236">
 
         <TextView
             android:id="@+id/textView2"
@@ -40,7 +44,7 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="316dp"
+            android:layout_width="389dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:inputType="textPersonName"
@@ -48,8 +52,11 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="#EFDFDB"
+            android:textColor="#000000"
+            android:gravity="center"
             android:text="@string/press_me" />
     </LinearLayout>
 
@@ -58,22 +65,34 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         tools:layout_editor_absoluteX="550dp"
-        tools:layout_editor_absoluteY="156dp" />
+        tools:layout_editor_absoluteY="156dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider"
-        android:layout_width="3dp"
-        android:layout_height="250dp"
+        android:layout_width="6dp"
+        android:layout_height="195dp"
         android:background="@color/purple_700"
-        tools:layout_editor_absoluteX="364dp"
-        tools:layout_editor_absoluteY="145dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
 
     <LinearLayout
         android:layout_width="116dp"
         android:layout_height="157dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="176dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811">
 
         <CheckBox
             android:id="@+id/checkBox"
@@ -97,8 +116,12 @@
     <RadioGroup
         android:layout_width="142dp"
         android:layout_height="113dp"
-        tools:layout_editor_absoluteX="417dp"
-        tools:layout_editor_absoluteY="196dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.744">
 
         <RadioButton
             android:id="@+id/radioButton"

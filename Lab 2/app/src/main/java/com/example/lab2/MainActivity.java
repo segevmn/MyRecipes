@@ -5,7 +5,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -55,5 +60,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i("onDestroy", "onDestroy");
+    }
+
+    public void add(View view) {
+        EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
+        EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
+        TextView equal = (TextView) findViewById(R.id.TV_equal);
+
+        String op1 = operand1.getText().toString();
+        int num1 = Integer.parseInt(op1);
+
+        String op2 = operand2.getText().toString();
+        int num2 = Integer.parseInt(op2);
+
+        if (TextUtils.isEmpty(op1) || TextUtils.isEmpty(op2)) {
+            Toast.makeText(this, "you must fill bout operands", Toast.LENGTH_LONG).show();
+        } else {
+            equal.setText(String.valueOf(num1 + num2));
+        }
+    }
+
+    public void sub(View view) {
+        EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
+        EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
+        TextView equal = (TextView) findViewById(R.id.TV_equal);
+
+        String op1 = operand1.getText().toString();
+        int num1 = Integer.parseInt(op1);
+
+        String op2 = operand2.getText().toString();
+        int num2 = Integer.parseInt(op2);
+
+        if (TextUtils.isEmpty(op1) || TextUtils.isEmpty(op2)) {
+            Toast.makeText(this, "you must fill bout operands", Toast.LENGTH_LONG).show();
+        } else {
+            equal.setText(String.valueOf(num1 - num2));
+        }
     }
 }

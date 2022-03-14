@@ -11,16 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="429dp"
         android:text="Simple Calculator"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185" />
 
     <LinearLayout
         android:layout_width="300dp"
@@ -54,6 +53,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="Operand 1:"
+                android:textColor="#000000"
                 android:textAlignment="center" />
 
             <EditText
@@ -61,12 +61,16 @@
                 android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_corner"
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text=""
-                android:textAlignment="center" />
+                android:textColor="#000000"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +96,7 @@
                 android:radius="4dp"
                 android:text="+"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/B_subtraction"
@@ -107,7 +111,7 @@
                 android:radius="4dp"
                 android:text="-"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/B_multiplication"
@@ -122,7 +126,7 @@
                 android:radius="4dp"
                 android:text="*"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/B_division"
@@ -138,7 +142,7 @@
                 android:radius="4dp"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
@@ -160,6 +164,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="Operand 2:"
+                android:textColor="#000000"
                 android:textAlignment="center" />
 
             <EditText
@@ -167,12 +172,16 @@
                 android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_corner"
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text=""
-                android:textAlignment="center" />
+                android:textColor="#000000"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <View
@@ -190,7 +199,7 @@
 
             <TextView
                 android:id="@+id/TV_equalSign"
-                android:layout_width="wrap_content"
+                android:layout_width="2dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
@@ -199,18 +208,23 @@
                 android:background="@drawable/rounded_corner"
                 android:text="="
                 android:textAlignment="center"
-                android:textSize="20dp" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/TV_equal"
-                android:layout_width="150dp"
+                android:layout_width="210dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_corner"
                 android:text=""
                 android:textAlignment="center"
-                android:textSize="20dp" />
+                android:freezesText="true"
+                android:textColor="#000000"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout

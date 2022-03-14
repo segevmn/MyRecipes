@@ -17,49 +17,60 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator);
-        Log.i("onCreate", "onCreate");
+        Log.i("MyTag", "onCreate");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("onStart", "onStart");
+        Log.i("MyTag", "onStart");
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
+        Log.i("MyTag", "onSaveInstanceState");
+        EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
+        EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
+        TextView equal = (TextView) findViewById(R.id.TV_equal);
+
+        outState.putString("operand1", operand1.getText().toString());
+        outState.putString("operand2", operand2.getText().toString());
+        outState.putString("equal", equal.getText().toString());
         super.onSaveInstanceState(outState);
-        Log.i("onSaveInstanceState", "onSaveInstanceState");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i("onResume", "onResume");
+        Log.i("MyTag", "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i("onPause", "onPause");
+        Log.i("MyTag", "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("onStop", "onStop");
+        Log.i("MyTag", "onStop");
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        Log.i("MyTag", "onRestoreInstanceState");
+
         super.onRestoreInstanceState(savedInstanceState);
-        Log.i("onRestoreInstanceState", "onRestoreInstanceState");
+        String operand1 = savedInstanceState.getString("operand1");
+        String operand2 = savedInstanceState.getString("operand2");
+        String equal = savedInstanceState.getString("equal");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i("onDestroy", "onDestroy");
+        Log.i("MyTag", "onDestroy");
     }
 
     public void add(View view) {
@@ -71,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         String op2 = operand2.getText().toString();
 
         if (op1.isEmpty() || op2.isEmpty()) {
-            Toast.makeText(this, "You must fill bout operands", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You must fill both operands", Toast.LENGTH_LONG).show();
         } else {
             int num1 = Integer.parseInt(op1);
             int num2 = Integer.parseInt(op2);
@@ -88,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         String op2 = operand2.getText().toString();
 
         if (op1.matches("") || op2.matches("")) {
-            Toast.makeText(this, "You must fill bout operands", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You must fill both operands", Toast.LENGTH_LONG).show();
         } else {
             int num1 = Integer.parseInt(op1);
             int num2 = Integer.parseInt(op2);
@@ -105,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         String op2 = operand2.getText().toString();
 
         if (op1.isEmpty() || op2.isEmpty()) {
-            Toast.makeText(this, "You must fill bout operands", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You must fill both operands", Toast.LENGTH_LONG).show();
         } else {
             int num1 = Integer.parseInt(op1);
             int num2 = Integer.parseInt(op2);
@@ -122,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         String op2 = operand2.getText().toString();
 
         if (op1.matches("") || op2.matches("")) {
-            Toast.makeText(this, "You must fill bout operands", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You must fill both operands", Toast.LENGTH_LONG).show();
         } else {
             if (op2.matches("0")) {
                 Toast.makeText(this, "You can't divide by 0", Toast.LENGTH_LONG).show();

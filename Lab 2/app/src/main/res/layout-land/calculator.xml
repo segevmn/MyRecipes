@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     android:background="#E8DDDD">
 
     <TextView
@@ -40,7 +41,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal"></LinearLayout>
 
             <LinearLayout
@@ -49,16 +50,64 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/TV_operand1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/TV_equal"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner"
+                    android:freezesText="true"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/TV_equalSign"
+                    android:layout_width="46dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:text="Operand 1:"
+                    android:background="@drawable/rounded_corner"
+                    android:text="="
                     android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dividerLand"
+            android:layout_width="5dp"
+            android:layout_height="230dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#135A5A" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/ET_operand1"
@@ -75,6 +124,19 @@
                     android:textAlignment="center"
                     android:textColor="#000000"
                     tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/TV_operand1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:text="Operand 1:"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -161,18 +223,6 @@
                 android:layout_height="50dp"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/TV_operand2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:text="Operand 2:"
-                    android:textAlignment="center"
-                    android:textColor="#000000" />
-
                 <EditText
                     android:id="@+id/ET_operand2"
                     android:layout_width="140dp"
@@ -188,6 +238,19 @@
                     android:textAlignment="center"
                     android:textColor="#000000"
                     tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/TV_operand2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:text="Operand 2:"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -197,63 +260,5 @@
 
         </LinearLayout>
 
-        <View
-            android:id="@+id/dividerLand"
-            android:layout_width="5dp"
-            android:layout_height="230dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#135A5A" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:orientation="horizontal"></LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/TV_equalSign"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner"
-                    android:text="="
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/TV_equal"
-                    android:layout_width="210dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner"
-                    android:text=""
-                    android:textAlignment="center"
-                    android:freezesText="true"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:orientation="horizontal"></LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

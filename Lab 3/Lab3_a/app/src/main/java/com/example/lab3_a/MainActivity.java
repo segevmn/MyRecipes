@@ -27,20 +27,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        if(data == null)
+        if (data == null)
             return;
         super.onActivityResult(requestCode, resultCode, data);
 
         // check the request code
-        if(requestCode==1)
+        if (requestCode==1)
         {
-            String fname = data.getStringExtra("fname");
-            String lname = data.getStringExtra("lname");
+            String firstName = data.getStringExtra("firstName");
+            String latsName = data.getStringExtra("latsName");
             String gender = data.getStringExtra("gender");
-            if(gender.equals("female")){
-                text.setText("Welcome Back Ms. " + fname + ", " + lname);
-            } else{
-                text.setText("Welcome Back Mr. " + fname + ", " + lname);
+            if (gender.equals("female")) {
+                text.setText("Welcome Back Ms. " + firstName + ", " + latsName);
+            } else {
+                text.setText("Welcome Back Mr. " + firstName + ", " + latsName);
             }
             register.setText("again...");
         }

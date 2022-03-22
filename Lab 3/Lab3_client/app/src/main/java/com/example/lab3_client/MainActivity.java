@@ -28,83 +28,52 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        if(data == null)
+        if (data == null)
             return;
 
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1)
+        if (requestCode==1)
         {
-            String fname = data.getStringExtra("fname");
-            String lname = data.getStringExtra("lname");
+            String firstName = data.getStringExtra("firstName");
+            String latsName = data.getStringExtra("latsName");
             String gender = data.getStringExtra("gender");
-            if(gender.equals("female")){
-                Reg.setText("Ms. " + fname + ", " + lname);
-            } else{
-                Reg.setText("Mr. " + fname + ", " + lname);
+            if (gender.equals("female")) {
+                Reg.setText("Ms. " + firstName + ", " + latsName);
+            } else {
+                Reg.setText("Mr. " + firstName + ", " + latsName);
             }
         }
     }
 
     public void SelectReg(View view) {
         Intent intent = new Intent("com.action.Lab3.Register");
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(intent,1);
-        } else{
-            Toast.makeText(getApplicationContext(),"No application found!", Toast.LENGTH_SHORT).show();
-        }
+        startActivityForResult(intent,1);
     }
 
     public void email(View view) {
-        if(mail.getText().toString().isEmpty())
-        {
-            Toast.makeText(getApplicationContext(),"Please Fill mail.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("plain/text");
-        intent.putExtra(Intent.EXTRA_EMAIL, mail.getText().toString());
-        intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
-        intent.putExtra(Intent.EXTRA_TEXT, "mail body");
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(Intent.createChooser(intent, ""));
-        } else{
-            Toast.makeText(getApplicationContext(),"No application found!", Toast.LENGTH_SHORT).show();
-        }
+        intent.setData(Uri.parse("mailto:" + mail.getText().toString()));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "this is the Subject");
+        intent.putExtra(Intent.EXTRA_TEXT, "this is the body");
+        startActivity(intent);
     }
 
     public void surf(View view) {
-        String url;
-
-        if(web.getText().toString().isEmpty())
+        if (web.getText().toString().isEmpty())
         {
             Toast.makeText(getApplicationContext(),"Please Fill website url.", Toast.LENGTH_SHORT).show();
             return;
         }
-        
-        if ((!web.getText().toString().startsWith("http://")) && (!web.getText().toString().startsWith("https://"))) {
-            url = "http://" + web.getText().toString();
-        } else {
-            url = web.getText().toString();
-        }
 
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-        browserIntent.setData(Uri.parse(url));
-        if (browserIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(browserIntent);
-        } else{
-            Toast.makeText(getApplicationContext(),"No application found!", Toast.LENGTH_SHORT).show();
-        }
+        Uri webpage = Uri.parse(web.getText().toString());
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(intent);
     }
 
     public void call(View view) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         Uri telephone = Uri.parse("tel:" + number.getText().toString());
         intent.setData(telephone);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else{
-            Toast.makeText(getApplicationContext(),"No application found!", Toast.LENGTH_SHORT).show();
-        }
+        startActivity(intent);
     }
 }

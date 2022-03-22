@@ -12,10 +12,10 @@
 
         <activity
             android:name=".MainActivity2"
-            android:exported="false"
+            android:exported="true"
             android:label="Ex7Other:Register" >
             <intent-filter>
-                <action android:name="com.action.Lab3.Register"/>
+                <action android:name="com.action.Lab3_Register"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

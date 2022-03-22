@@ -30,7 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
             return;
         }
 
-        int selectedId= group.getCheckedRadioButtonId();
+        int selectedId = group.getCheckedRadioButtonId();
 
         if (selectedId == R.id.radioButton2) {
             resultIntent.putExtra("gender", "female");

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // check the request code
-        if (requestCode==1)
+        if (requestCode == 1)
         {
             String firstName = data.getStringExtra("firstName");
             String latsName = data.getStringExtra("latsName");

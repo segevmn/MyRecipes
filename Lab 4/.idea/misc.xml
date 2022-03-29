@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 4/app/src/main/res/drawable/rounded_corner.xml" value="0.1" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 4/app/src/main/res/layout-land/calculator.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 4/app/src/main/res/layout/activity_main.xml" value="0.1984375" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 4/app/src/main/res/layout/calculator.xml" value="0.46446700507614214" />
+        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 4/app/src/main/res/layout/calculator.xml" value="0.2" />
+        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 4/app/src/main/res/layout/seekbar.xml" value="0.264" />
       </map>
     </option>
   </component>

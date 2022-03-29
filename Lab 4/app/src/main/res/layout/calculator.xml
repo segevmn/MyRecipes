@@ -2,17 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L_calculator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl"
-    android:background="#E8DDDD" >
-    <include layout="@layout/seekbar"/>
+    android:background="#E8DDDD"
+    android:layoutDirection="rtl">
+
+    <!--<include layout="@layout/seekbar" />-->
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="532dp"
         android:text="Simple Calculator"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -20,16 +26,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="186dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="169dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="133dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +45,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:orientation="horizontal">
-        </LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,16 +77,14 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="Operand 1:"
-                android:textColor="#000000"
-                android:textAlignment="center" />
-
+                android:textAlignment="center"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:orientation="horizontal">
-        </LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,8 +100,8 @@
                 android:layout_marginStart="4dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DC9595"
-                android:onClick="add"
                 android:enabled="false"
+                android:onClick="add"
                 android:radius="4dp"
                 android:text="+"
                 android:textAlignment="center"
@@ -113,8 +116,8 @@
                 android:layout_marginStart="4dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DC9595"
-                android:onClick="sub"
                 android:enabled="false"
+                android:onClick="sub"
                 android:radius="4dp"
                 android:text="-"
                 android:textAlignment="center"
@@ -129,8 +132,8 @@
                 android:layout_marginStart="4dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DC9595"
-                android:onClick="mul"
                 android:enabled="false"
+                android:onClick="mul"
                 android:radius="4dp"
                 android:text="*"
                 android:textAlignment="center"
@@ -146,8 +149,8 @@
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DC9595"
-                android:onClick="div"
                 android:enabled="false"
+                android:onClick="div"
                 android:radius="4dp"
                 android:text="/"
                 android:textAlignment="center"
@@ -157,8 +160,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:orientation="horizontal">
-        </LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -190,8 +192,8 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="Operand 2:"
-                android:textColor="#000000"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <View
@@ -210,16 +212,16 @@
             <TextView
                 android:id="@+id/TV_equal"
                 android:layout_width="210dp"
-                android:layout_height="80dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:paddingTop="2dp"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_corner"
                 android:freezesText="true"
+                android:paddingLeft="2dp"
+                android:paddingTop="2dp"
+                android:paddingRight="2dp"
                 android:text=""
                 android:textAlignment="center"
                 android:textColor="#000000"
@@ -260,12 +262,6 @@
                     android:textAlignment="center"
                     android:textColor="#000000" />
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal">
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

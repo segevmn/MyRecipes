@@ -1,20 +1,17 @@
 package com.example.lab4;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +19,22 @@ public class MainActivity extends AppCompatActivity {
 
         EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
         EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
+        Button add = (Button) findViewById(R.id.B_addition);
+        Button sub = (Button) findViewById(R.id.B_subtraction);
+        Button mul = (Button) findViewById(R.id.B_multiplication);
+        Button div = (Button) findViewById(R.id.B_division);
+
         operand1.addTextChangedListener(new MyTextWatcher());
         operand2.addTextChangedListener(new MyTextWatcher());
+
+        ViewGroup parentLayout = (ViewGroup)findViewById(R.id.L_calculator);
+        View child = getLayoutInflater().inflate(R.layout.seekbar, parentLayout, false);
+        parentLayout.addView(child);
 
         SeekBar seekbar;
         seekbar = (SeekBar)findViewById(R.id.seekBar);
         seekbar.setProgress(0);
+        seekbar.setOnSeekBarChangeListener(this);
 
         //attach an instance of HandleClick to the Button clear
         findViewById(R.id.B_clear).setOnClickListener(new View.OnClickListener(){
@@ -64,14 +71,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable editable) {
+            EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
+            EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
             Button add = (Button) findViewById(R.id.B_addition);
             Button sub = (Button) findViewById(R.id.B_subtraction);
             Button mul = (Button) findViewById(R.id.B_multiplication);
             Button div = (Button) findViewById(R.id.B_division);
 
-            EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
             String op1 = operand1.getText().toString();
-            EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
             String op2 = operand2.getText().toString();
 
             add.setEnabled(false);
@@ -100,24 +107,45 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
-        EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        TextView textView = (TextView) findViewById(R.id.TV_seekBar);
         TextView equal = (TextView) findViewById(R.id.TV_equal);
 
-        outState.putString("operand1", operand1.getText().toString());
-        outState.putString("operand2", operand2.getText().toString());
-        outState.putString("equal", equal.getText().toString());
-        super.onSaveInstanceState(outState);
+        if (progress == 0) {
+            int res = (int)Global.result;
+            textView.setText("Example:123");
+            equal.setText(String.valueOf(res));
+        }
+        else if(progress == 1) {
+            textView.setText("Example:123.0");
+            equal.setText(String.format("%.1f", Global.result));
+        }
+        else if(progress == 2) {
+            textView.setText("Example:123.00");
+            equal.setText(String.format("%.2f", Global.result));
+        }
+        else if(progress == 3) {
+            textView.setText("Example:123.000");
+            equal.setText(String.format("%.3f", Global.result));
+        }
+        else if(progress == 4) {
+            textView.setText("Example:123.0000");
+            equal.setText(String.format("%.4f", Global.result));
+        }
+        else if(progress == 5) {
+            textView.setText("Example:123.00000");
+            equal.setText(String.format("%.5f", Global.result));
+        }
     }
 
     @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        String operand1 = savedInstanceState.getString("operand1");
-        String operand2 = savedInstanceState.getString("operand2");
-        String equal = savedInstanceState.getString("equal");
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
     }
 
     public void add(View view) {
@@ -128,9 +156,10 @@ public class MainActivity extends AppCompatActivity {
         String op1 = operand1.getText().toString();
         String op2 = operand2.getText().toString();
 
-        double num1 = Integer.parseInt(op1);
-        double num2 = Integer.parseInt(op2);
-        equal.setText(String.valueOf(num1 + num2));
+        float num1 = Integer.parseInt(op1);
+        float num2 = Integer.parseInt(op2);
+        Global.result = (num1 + num2);
+        equal.setText(String.valueOf(Global.result));
     }
 
     public void sub(View view) {
@@ -141,9 +170,10 @@ public class MainActivity extends AppCompatActivity {
         String op1 = operand1.getText().toString();
         String op2 = operand2.getText().toString();
 
-        double num1 = Integer.parseInt(op1);
-        double num2 = Integer.parseInt(op2);
-        equal.setText(String.valueOf(num1 - num2));
+        float num1 = Integer.parseInt(op1);
+        float num2 = Integer.parseInt(op2);
+        Global.result = (num1 - num2);
+        equal.setText(String.valueOf(Global.result));
     }
 
     public void mul(View view) {
@@ -154,9 +184,10 @@ public class MainActivity extends AppCompatActivity {
         String op1 = operand1.getText().toString();
         String op2 = operand2.getText().toString();
 
-        double num1 = Integer.parseInt(op1);
-        double num2 = Integer.parseInt(op2);
-        equal.setText(String.valueOf(num1 * num2));
+        float num1 = Integer.parseInt(op1);
+        float num2 = Integer.parseInt(op2);
+        Global.result = (num1 * num2);
+        equal.setText(String.valueOf(Global.result));
     }
 
     public void div(View view) {
@@ -167,8 +198,9 @@ public class MainActivity extends AppCompatActivity {
         String op1 = operand1.getText().toString();
         String op2 = operand2.getText().toString();
 
-        double num1 = Integer.parseInt(op1);
-        double num2 = Integer.parseInt(op2);
-        equal.setText(String.valueOf(num1 / num2));
+        float num1 = Integer.parseInt(op1);
+        float num2 = Integer.parseInt(op2);
+        Global.result = (num1 / num2);
+        equal.setText(String.valueOf(Global.result));
     }
 }

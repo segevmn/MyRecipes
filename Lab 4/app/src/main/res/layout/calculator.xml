@@ -8,8 +8,8 @@
     android:background="#E8DDDD"
     android:layoutDirection="rtl">
 
-    <!--<include layout="@layout/seekbar" />-->
-
+    <!---->
+    <include layout="@layout/seekbar" />
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"

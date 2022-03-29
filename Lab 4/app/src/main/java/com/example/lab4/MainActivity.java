@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -19,17 +18,13 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
         EditText operand1 = (EditText) findViewById(R.id.ET_operand1);
         EditText operand2 = (EditText) findViewById(R.id.ET_operand2);
-        Button add = (Button) findViewById(R.id.B_addition);
-        Button sub = (Button) findViewById(R.id.B_subtraction);
-        Button mul = (Button) findViewById(R.id.B_multiplication);
-        Button div = (Button) findViewById(R.id.B_division);
 
         operand1.addTextChangedListener(new MyTextWatcher());
         operand2.addTextChangedListener(new MyTextWatcher());
 
-        ViewGroup parentLayout = (ViewGroup)findViewById(R.id.L_calculator);
-        View child = getLayoutInflater().inflate(R.layout.seekbar, parentLayout, false);
-        parentLayout.addView(child);
+//        ViewGroup parentLayout = (ViewGroup)findViewById(R.id.L_calculator);
+//        View child = getLayoutInflater().inflate(R.layout.seekbar, parentLayout, false);
+//        parentLayout.addView(child);
 
         SeekBar seekbar;
         seekbar = (SeekBar)findViewById(R.id.seekBar);

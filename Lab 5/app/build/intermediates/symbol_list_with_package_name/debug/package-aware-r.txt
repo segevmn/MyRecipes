@@ -768,6 +768,7 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id activity_main
 id add
 id alertTitle
 id all
@@ -810,6 +811,8 @@ id fill_vertical
 id forever
 id fragA
 id fragContainer
+id frag_a
+id frag_b
 id fragment_container_view_tag
 id gone
 id group_divider

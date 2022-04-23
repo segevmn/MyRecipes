@@ -767,6 +767,7 @@ int id action_mode_close_button 0x7f070042
 int id action_text 0x7f070043
 int id actions 0x7f070044
 int id activity_chooser_view_content 0x7f070045
+int id activity_main 0x7f0700d8
 int id add 0x7f070046
 int id alertTitle 0x7f070047
 int id all 0x7f070048
@@ -809,6 +810,8 @@ int id fill_vertical 0x7f07006c
 int id forever 0x7f07006d
 int id fragA 0x7f07006e
 int id fragContainer 0x7f07006f
+int id frag_a 0x7f0700d6
+int id frag_b 0x7f0700d7
 int id fragment_container_view_tag 0x7f070070
 int id gone 0x7f070071
 int id group_divider 0x7f070072

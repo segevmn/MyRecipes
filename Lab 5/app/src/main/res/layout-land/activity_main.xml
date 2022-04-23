@@ -4,25 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/detailsElementBackground"
-    android:padding="@dimen/activity_horizontal_margin"
+    android:padding="10dp"
     tools:context="com.example.ex5x.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragA"
         class="com.example.ex5x.FragA"
-        android:layout_width="340dp"
-        android:layout_height="380dp"
+        android:layout_width="360dp"
+        android:layout_height="340dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/frag_a" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragContainer"
-        android:tag="FRAGB"
-        android:layout_width="340dp"
-        android:layout_height="380dp"
+        android:tag="fragB"
+        android:layout_width="360dp"
+        android:layout_height="340dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_alignParentEnd="true"
-        android:background="?android:attr/detailsElementBackground"/>
+        tools:layout="@layout/frag_b" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,12 +53,11 @@ public class FragB extends Fragment /*implements SeekBar.OnSeekBarChangeListener
 
 	//the activity informs fragB about new click in fragA
 	public void display(float input1, float input2, char op, float res) {
-		//resF = res;
-		Result.setText(String.valueOf(input1) + op + String.valueOf(input2) + "=" + String.valueOf(res));
+		Result.setText(String.valueOf(input1) + " " + op + " " + String.valueOf(input2) + " " + "=" + " " + String.valueOf(res));
 	}
 
 	public interface FragBListener {
-		//put here methods you want to utilize to communicate with the hosting activity
+
 	}
 
 	/*public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

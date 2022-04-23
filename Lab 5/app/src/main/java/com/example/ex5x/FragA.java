@@ -1,6 +1,5 @@
 package com.example.ex5x;
 
-//import android.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -155,7 +154,7 @@ public class FragA extends Fragment implements OnClickListener{
 			mul.setEnabled(false);
 			div.setEnabled(false);
 
-			if (op1.matches("") && op2.matches("")) {
+			if (op1.matches("") || op2.matches("")) {
 				add.setEnabled(false);
 				sub.setEnabled(false);
 				mul.setEnabled(false);

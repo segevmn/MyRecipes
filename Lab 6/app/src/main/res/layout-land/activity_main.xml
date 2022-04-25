@@ -1,0 +1,30 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/detailsElementBackground"
+    android:padding="10dp"
+    tools:context="com.example.lab6.MainActivity"
+    android:layoutDirection="ltr" >
+
+     <androidx.fragment.app.FragmentContainerView
+         android:id="@+id/fragA"
+         class="com.example.lab6.FragA"
+         android:layout_width="360dp"
+         android:layout_height="340dp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         tools:layout="@layout/frag_a" />
+
+     <androidx.fragment.app.FragmentContainerView
+         android:id="@+id/fragContainer"
+         android:tag="fragB"
+         android:layout_width="360dp"
+         android:layout_height="340dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         tools:layout="@layout/frag_b" />
+     <!--android:layout_alignParentEnd="true"
+         android:background="?android:attr/detailsElementBackground" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

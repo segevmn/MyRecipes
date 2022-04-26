@@ -2,6 +2,10 @@ package com.example.lab6;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements FragA.FragAListener, FragB.FragBListener {
@@ -27,8 +31,45 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 	}
 
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.menu, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+		switch (item.getItemId())
+		{
+			case R.id.exit:
+				exitDialog exitDiag = new exitDialog();
+				exitDiag.show(getSupportFragmentManager(), "exit Dialog");
+				break;
+
+			case R.id.setting:
+				settingDialog exampleD = new settingDialog();
+				exampleD.show(getSupportFragmentManager(), "example dialog");
+				break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	public void applySeekBar(int progress) {
+		Log.i("MyTag", "applySeekBar1");
+		FragB fragB;
+		fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
+		Log.i("MyTag", "applySeekBar2");
+		fragB.displayRes(progress);
+	}
+
+	public void exitApp() {
+		finish();
+		System.exit(0);
+	}
+
+	@Override
 	public void OnClickEvent(float input1, float input2, int flag) {
 		FragB fragB;
+
 		if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
 		{
 			getSupportFragmentManager().beginTransaction()

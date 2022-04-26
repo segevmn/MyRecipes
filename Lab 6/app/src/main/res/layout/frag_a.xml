@@ -84,8 +84,7 @@
                 android:radius="4dp"
                 android:text="+"
                 android:textAlignment="center"
-                android:textColor="#000000"
-                android:background="@android:color/holo_blue_bright" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/B_subtraction"
@@ -99,8 +98,7 @@
                 android:radius="4dp"
                 android:text="-"
                 android:textAlignment="center"
-                android:textColor="#000000"
-                android:background="@android:color/holo_blue_bright" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/B_multiplication"
@@ -114,8 +112,7 @@
                 android:radius="4dp"
                 android:text="*"
                 android:textAlignment="center"
-                android:textColor="#000000"
-                android:background="@android:color/holo_blue_bright" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/B_division"
@@ -130,8 +127,7 @@
                 android:radius="4dp"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="#000000"
-                android:background="@android:color/holo_blue_bright" />
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout

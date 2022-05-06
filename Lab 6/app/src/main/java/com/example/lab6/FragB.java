@@ -1,14 +1,11 @@
 package com.example.lab6;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class FragB extends Fragment {
@@ -18,12 +15,12 @@ public class FragB extends Fragment {
 	String resS;
 
 	@Override
-	public void onCreate(@Nullable Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
-	public void onAttach(@NonNull Context context) {
+	public void onAttach(Context context) {
 		try {
 			this.listener = (FragBListener)context;
 		} catch(ClassCastException e) {
@@ -52,6 +49,11 @@ public class FragB extends Fragment {
 		resS = String.valueOf(input1) + " " + op + " " + String.valueOf(input2) + " = " + String.format("%.0f", resF);
 		Result.setText(resS);
 		resS = String.valueOf(input1) + " " + op + " " + String.valueOf(input2) + " = ";
+	}
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
 	}
 
 	public void displayRes(int progress) {

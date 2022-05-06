@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class FragA extends Fragment implements OnClickListener{
+public class FragA extends Fragment implements OnClickListener {
 	FragAListener listener;
 	EditText operand1, operand2;
 	Button add, sub , mul, div, clear;

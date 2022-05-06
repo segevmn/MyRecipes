@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements FragA.FragAListener, FragB.FragBListener {
+	Menu menu2;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,11 +22,13 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 				getSupportFragmentManager().beginTransaction()
 						.show(fragB)
 						.commit();
+				menu2.getItem(0).setVisible(true);
 			}
 			else {
 				getSupportFragmentManager().beginTransaction()
 						.add(R.id.fragContainer, FragB.class,null, "FRAGB")
 						.commit();
+				menu2.getItem(0).setVisible(true);
 			}
 			getSupportFragmentManager().executePendingTransactions();
 		}
@@ -33,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu, menu);
+		menu2 = menu;
+		menu2.getItem(0).setVisible(false);
 		return true;
 	}
 
@@ -53,13 +59,13 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 		return super.onOptionsItemSelected(item);
 	}
 
-	public void applySeekBar(int progress) {
+	/* public void applySeekBar(int progress) {
 		Log.i("MyTag", "applySeekBar1");
 		FragB fragB;
 		fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
 		Log.i("MyTag", "applySeekBar2");
 		fragB.displayRes(progress);
-	}
+	} */
 
 	public void exitApp() {
 		finish();
@@ -78,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 					.addToBackStack("BBB")
 					.commit();
 			getSupportFragmentManager().executePendingTransactions();
+			menu2.getItem(0).setVisible(true);
 		}
 
 		float res;

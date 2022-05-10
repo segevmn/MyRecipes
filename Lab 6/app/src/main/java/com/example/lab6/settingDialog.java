@@ -15,10 +15,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarChangeListener, TextView.OnEditorActionListener {
-    private DialogListener listener;
+    public DialogListener listener;
     SeekBar seekBar;
     TextView exampleText;
     int prog = 0;
+
+
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -26,17 +28,25 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.seekbar, null);
 
+
         exampleText = view.findViewById(R.id.TV_seekBar);
         seekBar = view.findViewById(R.id.seekBar);
-        seekBar.setProgress(0);
-        seekBar.setOnSeekBarChangeListener(this);
+      //  seekBar.setProgress(0);
+     //   seekBar.setOnSeekBarChangeListener(this);
         // builder.setTitle("Set the numbers precision");
         builder.setView(view)
                 .setTitle("Set the numbers precision");
         builder.setPositiveButton("OK",  new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                listener = new DialogListener() {
+
+                    public void applySeekBar(int prog) {
+
+                    }
+                };
                 prog = seekBar.getProgress();
+
                 listener.applySeekBar(prog);
             }
         });
@@ -46,6 +56,8 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
                     dialog.dismiss();
             }
         });
+        seekBar.setProgress(0);
+        seekBar.setOnSeekBarChangeListener(this);
         /* builder.setView(view)
                 .setTitle("Set the numbers precision")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -63,6 +75,8 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
                 });*/
         return builder.create();
     }
+
+
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -86,6 +100,7 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
                 exampleText.append("0");
         }
     }
+
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {

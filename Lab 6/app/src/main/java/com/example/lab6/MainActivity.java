@@ -10,6 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements FragA.FragAListener, FragB.FragBListener {
 	Menu menu2;
+	public settingDialog.DialogListener listener = new settingDialog.DialogListener() {
+		@Override
+		public void applySeekBar(int prog) {
+			Log.i("MyTag", "applySeekBar1");
+			FragB fragB;
+			fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
+			Log.i("MyTag", "applySeekBar2");
+			fragB.displayRes(prog);
+		}
+	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +69,14 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 		return super.onOptionsItemSelected(item);
 	}
 
-	/* public void applySeekBar(int progress) {
+
+/*	public void applySeekBar(int progress) {
 		Log.i("MyTag", "applySeekBar1");
 		FragB fragB;
 		fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
 		Log.i("MyTag", "applySeekBar2");
 		fragB.displayRes(progress);
-	} */
+	}*/
 
 	public void exitApp() {
 		finish();

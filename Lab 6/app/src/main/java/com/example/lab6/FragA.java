@@ -7,7 +7,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -126,7 +125,6 @@ public class FragA extends Fragment implements OnClickListener{
 		float num1 = Integer.parseInt(op1);
 		float num2 = Integer.parseInt(op2);
 		float i = (num1 / num2);
-		Log.i("MyTag", String.valueOf(i));
 		listener.OnClickEvent(num1, num2, 4);
 	}
 

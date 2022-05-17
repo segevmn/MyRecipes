@@ -3,6 +3,7 @@ package com.example.lab6;
 import androidx.fragment.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +59,7 @@ public class FragB extends Fragment {
 
 	public void displayRes(int progress) {
 		//Result.setText(resS + String.format("%.3f", resF));
+		Log.i("MyTag", "displayRes");
 		Result.setText(resS + String.format("%." + progress + "f", resF));
 	}
 

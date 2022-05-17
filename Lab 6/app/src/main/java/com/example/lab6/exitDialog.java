@@ -50,7 +50,6 @@ public class exitDialog extends AppCompatDialogFragment {
         }
     }
 
-
     public interface exitDialogListener
     {
         void exitApp();

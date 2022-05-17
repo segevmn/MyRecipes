@@ -2,7 +2,6 @@ package com.example.lab6;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
@@ -10,16 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements FragA.FragAListener, FragB.FragBListener {
 	Menu menu2;
-	public settingDialog.DialogListener listener = new settingDialog.DialogListener() {
-		@Override
-		public void applySeekBar(int prog) {
-			Log.i("MyTag", "applySeekBar1");
-			FragB fragB;
-			fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
-			Log.i("MyTag", "applySeekBar2");
-			fragB.displayRes(prog);
-		}
-	};
+
+	public void applySeekBar(int seekBarProgress) {
+		FragB fragB;
+		fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
+		fragB.displayRes(seekBarProgress);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +27,13 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 				getSupportFragmentManager().beginTransaction()
 						.show(fragB)
 						.commit();
-				menu2.getItem(0).setVisible(true);
 			}
 			else {
 				getSupportFragmentManager().beginTransaction()
 						.add(R.id.fragContainer, FragB.class,null, "FRAGB")
 						.commit();
-				menu2.getItem(0).setVisible(true);
 			}
+			menu2.getItem(0).setVisible(true);
 			getSupportFragmentManager().executePendingTransactions();
 		}
 	}
@@ -68,15 +62,6 @@ public class MainActivity extends AppCompatActivity implements FragA.FragAListen
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
-/*	public void applySeekBar(int progress) {
-		Log.i("MyTag", "applySeekBar1");
-		FragB fragB;
-		fragB = (FragB) getSupportFragmentManager().findFragmentByTag("FRAGB");
-		Log.i("MyTag", "applySeekBar2");
-		fragB.displayRes(progress);
-	}*/
 
 	public void exitApp() {
 		finish();

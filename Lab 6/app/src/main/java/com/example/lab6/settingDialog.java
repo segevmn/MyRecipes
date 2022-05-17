@@ -10,17 +10,14 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarChangeListener, TextView.OnEditorActionListener {
+public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarChangeListener, TextView.OnEditorActionListener, FragB.FragBListener {
     public DialogListener listener;
     SeekBar seekBar;
     TextView exampleText;
-    int prog = 0;
-
-
+    static int seekBarProgress = 0;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -28,55 +25,27 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.seekbar, null);
 
-
         exampleText = view.findViewById(R.id.TV_seekBar);
         seekBar = view.findViewById(R.id.seekBar);
-      //  seekBar.setProgress(0);
-     //   seekBar.setOnSeekBarChangeListener(this);
-        // builder.setTitle("Set the numbers precision");
+        seekBar.setProgress(0);
+        seekBar.setOnSeekBarChangeListener(this);
+
         builder.setView(view)
                 .setTitle("Set the numbers precision");
-        builder.setPositiveButton("OK",  new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                listener = new DialogListener() {
-
-                    public void applySeekBar(int prog) {
-
-                    }
-                };
-                prog = seekBar.getProgress();
-
-                listener.applySeekBar(prog);
+            public void onClick(DialogInterface DialogInterface, int which) {
+                ((MainActivity)getActivity()).applySeekBar(seekBarProgress);
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
+            public void onClick(DialogInterface DialogInterface, int which) {
+                DialogInterface.dismiss();
             }
         });
-        seekBar.setProgress(0);
-        seekBar.setOnSeekBarChangeListener(this);
-        /* builder.setView(view)
-                .setTitle("Set the numbers precision")
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        return;
-                    }
-                })
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        prog = seekBar.getProgress();
-                        listener.applySeekBar(prog);
-                    }
-                });*/
         return builder.create();
     }
-
-
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -91,16 +60,15 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        prog = progress;
-        if (prog == 0)
+        seekBarProgress = progress;
+        if (seekBarProgress == 0)
             exampleText.setText("Example: 123");
         else {
             exampleText.setText("Example: 123.");
-            for (int i = 0; i < prog; i++)
+            for (int i = 0; i < seekBarProgress; i++)
                 exampleText.append("0");
         }
     }
-
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
@@ -113,12 +81,11 @@ public class settingDialog extends DialogFragment implements SeekBar.OnSeekBarCh
     }
 
     public interface DialogListener {
-        void applySeekBar(int prog);
+        void applySeekBar(int seekBarProgress);
     }
 
     @Override
     public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
         return false;
     }
-
 }

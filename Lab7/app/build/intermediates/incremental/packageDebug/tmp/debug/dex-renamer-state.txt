@@ -1,4 +1,4 @@
-#Tue May 24 12:24:32 IDT 2022
+#Tue May 24 13:15:59 IDT 2022
 base.2=C\:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 path.2=7/classes.dex
 base.1=C\:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

@@ -1,15 +1,27 @@
 [
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_united_states.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\united_states.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_australia.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\australia.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_new_zealand.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\new_zealand.png"
     },
     {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
@@ -20,24 +32,36 @@
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\layout\\fragmentcountry.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\layout_row_item.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\layout\\row_item.xml"
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_china.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\china.png"
     },
     {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_greece.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\greece.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_mexico.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\mexico.png"
     },
     {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_france.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\france.png"
+    },
+    {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_scotland.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\scotland.png"
     },
     {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -56,12 +80,56 @@
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_israel.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\israel.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_morocco.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\morocco.png"
     },
     {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_germany.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\germany.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_norway.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\norway.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_brazil.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\brazil.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\layout_row_item.xml.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\layout\\row_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_romania.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\romania.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_switzerland.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\switzerland.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_jordan.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\jordan.png"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_thailand.png.flat",
+        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\thailand.png"
     },
     {
         "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CountryFragment.CountryListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

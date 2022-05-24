@@ -1,138 +1,138 @@
 [
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_united_states.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\united_states.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_france.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/france.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_australia.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\australia.png"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_new_zealand.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\new_zealand.png"
+        "merged": "com.example.lab7.app-merged_res-25:/layout_fragmentcountry.xml.flat",
+        "source": "com.example.lab7.app-main-27:/layout/fragmentcountry.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_romania.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/romania.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragmentcountry.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\layout\\fragmentcountry.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_united_states.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/united_states.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_china.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\china.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_brazil.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/brazil.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_greece.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\greece.png"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_mexico.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\mexico.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.lab7.app-main-27:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_norway.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/norway.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_france.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\france.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_new_zealand.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/new_zealand.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_germany.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/germany.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_scotland.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\scotland.png"
+        "merged": "com.example.lab7.app-merged_res-25:/layout_row_item.xml.flat",
+        "source": "com.example.lab7.app-main-27:/layout/row_item.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_australia.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/australia.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_israel.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/israel.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_israel.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\israel.png"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_morocco.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\morocco.png"
+        "merged": "com.example.lab7.app-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "com.example.lab7.app-main-27:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_germany.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\germany.png"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_norway.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\norway.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_greece.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/greece.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_brazil.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\brazil.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_scotland.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/scotland.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\layout_row_item.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\layout\\row_item.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_morocco.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/morocco.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_romania.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\romania.png"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_switzerland.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\switzerland.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_thailand.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/thailand.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_mexico.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/mexico.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_jordan.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\jordan.png"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_china.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/china.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_jordan.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/jordan.png"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\drawable_thailand.png.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\drawable\\thailand.png"
+        "merged": "com.example.lab7.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.lab7.app-main-27:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\segev\\Documents\\GitHub\\Android_Development\\Lab7\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.lab7.app-merged_res-25:/drawable_switzerland.png.flat",
+        "source": "com.example.lab7.app-main-27:/drawable/switzerland.png"
     }
 ]

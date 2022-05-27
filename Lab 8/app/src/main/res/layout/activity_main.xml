@@ -5,19 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragContainer"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/fragContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/holo_blue_bright" >
+
 
         <fragment
-            android:id="@+id/Frag"
+            android:id="@+id/FragCountry"
             class="com.example.lab8.CountryFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            tools:layout="@layout/fragmentcountry"
             />
-    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

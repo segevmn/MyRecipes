@@ -53,5 +53,6 @@ public class CountryFragment extends Fragment {
     }
 
     public interface CountryListener {
+        public  void OnClickEvent (Country country);
     }
 }

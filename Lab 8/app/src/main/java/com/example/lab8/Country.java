@@ -31,12 +31,11 @@ public class Country {
 		this.shorty = shorty;
 	}
 
-	public Country(String name, String flag, String shorty){
+	public Country(String name, String flag, String shorty) {
 		this.name = name;
 		this.flag = flag;
-		this.shorty=shorty;
-		this.details="";
-
+		this.shorty = shorty;
+		this.details = "";
 	}
 
 	public String getAnthem() {
@@ -51,11 +50,12 @@ public class Country {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void setDetails(String details){
-		this.details=details;
+	public void setDetails(String details) {
+		this.details = details;
 	}
-	public String getDetails(){
-		return this.details;
+
+	public String getDetails() {
+		return details;
 	}
 
 	public int compare(Country other) {

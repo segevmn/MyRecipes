@@ -8,14 +8,10 @@
     android:id="@+id/fragContainer"
     tools:context=".MainActivity">
 
-
-
         <fragment
             android:id="@+id/FragCountry"
             class="com.example.lab8.CountryFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragmentcountry"
-            />
-
+            tools:layout="@layout/fragmentcountry" />
 </androidx.constraintlayout.widget.ConstraintLayout>

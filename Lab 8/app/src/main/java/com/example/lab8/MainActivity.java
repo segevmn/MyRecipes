@@ -1,7 +1,6 @@
 package com.example.lab8;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -23,10 +22,11 @@ public class MainActivity extends AppCompatActivity implements CountryFragment.C
                         .commit();
             }
         }
+        getSupportFragmentManager().executePendingTransactions();
     }
 
     @Override
-    public void  OnClickEvent (Country country){
+    public void  OnClickEvent (Country country) {
         CountryDetailsFragment cdFrag;
         if ((getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)){
             getSupportFragmentManager().beginTransaction()
@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity implements CountryFragment.C
                     .add(R.id.fragContainer, CountryDetailsFragment.class, null, "COUNTRYDETAILSFRAGMENT")
                     .addToBackStack("BBB")
                     .commit();
+            getSupportFragmentManager().executePendingTransactions();
         }
         cdFrag = (CountryDetailsFragment) getSupportFragmentManager().findFragmentByTag("COUNTRYDETAILSFRAGMENT");
         cdFrag.details(country);
-
     }
 }

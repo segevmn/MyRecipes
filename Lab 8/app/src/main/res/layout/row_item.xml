@@ -10,7 +10,7 @@
         android:layout_height="91dp"
         android:background="#00ACC1"
         android:orientation="horizontal"
-        android:layout_marginBottom="2dp" >
+        android:layout_marginBottom="2dp">
 
         <ImageView
             android:id="@+id/flag"

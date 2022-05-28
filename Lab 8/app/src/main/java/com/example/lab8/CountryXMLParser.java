@@ -1,12 +1,9 @@
 package com.example.lab8;
 
-
 import android.content.Context;
 import android.content.res.AssetManager;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -19,8 +16,7 @@ public class CountryXMLParser {
 	final static String KEY_SHORT="short";
 	final static String KEY_DETAILS="details";
 
-
-	public static ArrayList<Country> parseCountries(Context context){
+	public static ArrayList<Country> parseCountries(Context context) {
 		ArrayList<Country> data = null;
 		InputStream in = openCountriesFile(context);
 		XmlPullParserFactory xmlFactoryObject;
@@ -34,9 +30,9 @@ public class CountryXMLParser {
 		        String inTag = "";
 		        String strTagText = null;
 		
-		        while (eventType != XmlPullParser.END_DOCUMENT){
+		        while (eventType != XmlPullParser.END_DOCUMENT) {
 		        	inTag = parser.getName();
-		            switch (eventType){
+		            switch (eventType) {
 		                case XmlPullParser.START_DOCUMENT:
 		                	data = new ArrayList<Country>();
 		                    break;
@@ -65,16 +61,20 @@ public class CountryXMLParser {
 		            }//switch
 		            eventType = parser.next();
 		        }//while
-			} catch (Exception e) {e.printStackTrace();}
+			} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return data;
 	}
 
-	private static InputStream openCountriesFile(Context context){
+	private static InputStream openCountriesFile(Context context) {
 		AssetManager assetManager = context.getAssets();
 		InputStream in =null;
 		try {
 			in = assetManager.open("countries.xml");
-		} catch (IOException e) {e.printStackTrace();}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return in;
 	}
 }

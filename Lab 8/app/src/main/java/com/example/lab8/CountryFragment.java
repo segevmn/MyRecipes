@@ -12,12 +12,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-public class CountryFragment extends Fragment {
+public class CountryFragment extends Fragment implements CountryAdapter.ItemClickListener {
     CountryListener listener;
     private RecyclerView CountriesecyclerView;
     private CountryAdapter CAdapter;
     ArrayList<Country> countriesData=null;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -38,16 +42,21 @@ public class CountryFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        CountriesecyclerView = view.findViewById(R.id.recycler);
         super.onViewCreated(view, savedInstanceState);
+        CountriesecyclerView = view.findViewById(R.id.recycler);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        CAdapter = new CountryAdapter(getActivity(),countriesData);
+        CAdapter = new CountryAdapter(getActivity(),countriesData, this);
         CountriesecyclerView.setAdapter(CAdapter);
         CountriesecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+    }
+
+    @Override
+    public void OnClickEvent(Country country) {
+        ((MainActivity)getActivity()).OnClickEvent(country);
     }
 
     public interface CountryListener {

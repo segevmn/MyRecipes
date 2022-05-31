@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/segev/Documents/GitHub/Android_Development/Lab 5/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/segev/Documents/GitHub/Android_Development/Lab 5/app/src/main/res/layout-port/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 5/app/src/main/res/drawable-xxhdpi/rounded_corner.xml" value="0.1775" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 5/app/src/main/res/layout-land/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/Lab 5/app/src/main/res/layout-port/activity_main.xml" value="0.1" />

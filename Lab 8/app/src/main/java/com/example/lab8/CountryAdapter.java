@@ -12,11 +12,13 @@ import java.util.ArrayList;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
     ArrayList<Country> allcountries;
+    private ItemClickListener clickListener;
     Context context;
 
-    public CountryAdapter(Context context, ArrayList<Country> allcountries) {
+    public CountryAdapter(Context context, ArrayList<Country> allcountries,ItemClickListener clickListener) {
         this.context = context;
         this.allcountries = allcountries;
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -32,7 +34,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         holder.countryName.setText(country.getName());
         holder.countryPopulation.setText(country.getShorty());
         holder.countryFlag.setImageResource(context.getResources().getIdentifier(country.flag,"drawable",context.getPackageName()));
-        holder.countryDetails.setText(country.getDetails());
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -45,6 +46,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
             @Override
             public void onClick(View view) {
 
+                clickListener.OnClickEvent(country);
             }
         });
     }
@@ -58,7 +60,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         public TextView countryName;
         public TextView countryPopulation;
         public ImageView countryFlag;
-        public TextView countryDetails;
         View itemView;
 
         public ViewHolder(@NonNull View itemView) {
@@ -67,6 +68,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
             countryName = (TextView) itemView.findViewById(R.id.countryName);
             countryPopulation = (TextView) itemView.findViewById(R.id.countryPopulation);
             countryFlag = (ImageView) itemView.findViewById(R.id.flag);
+
         }
+
+    }
+    public interface ItemClickListener {
+        public void OnClickEvent(Country country);
     }
 }

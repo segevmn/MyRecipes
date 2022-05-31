@@ -47,11 +47,12 @@ public class CountryFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        CAdapter = new CountryAdapter(getActivity(),countriesData);
+        CAdapter = new CountryAdapter(CountryAdapter.adapterListener, getActivity(), countriesData);
         CountriesecyclerView.setAdapter(CAdapter);
         CountriesecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     public interface CountryListener {
+
     }
 }

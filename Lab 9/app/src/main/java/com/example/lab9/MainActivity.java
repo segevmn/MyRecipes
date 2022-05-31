@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements CountryFragment.C
         return true;
     }
 
-    /* @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
@@ -26,8 +26,15 @@ public class MainActivity extends AppCompatActivity implements CountryFragment.C
                 settingDialog exampleD = new settingDialog();
                 exampleD.show(getSupportFragmentManager(), "example dialog");
                 break;
-            default:
-                return super.onOptionsItemSelected(item);
         }
-    } */
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void apply() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(android.R.id.content, new setting())
+                .addToBackStack(null)
+                .commit();
+    }
 }

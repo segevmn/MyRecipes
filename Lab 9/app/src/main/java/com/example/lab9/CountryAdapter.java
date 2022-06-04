@@ -17,7 +17,10 @@ import java.util.ArrayList;
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
     ArrayList<Country> allcountries;
     Context context;
+    Country countryPos;
     public static AdapterListener adapterListener;
+    private static ArrayList<String> removed_countries;
+    private ArrayList<Country> countriesTemp;
 
     public CountryAdapter(AdapterListener adapterListener, Context context, ArrayList<Country> allcountries){
         this.adapterListener = adapterListener;
@@ -29,6 +32,27 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View viewCountry = inflater.inflate(R.layout.row_item,parent,false);
+        countriesTemp = new ArrayList<Country>();
+
+        //shared-preferences
+        SharedPreferences prefManager = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean remember = prefManager.getBoolean("rememberCB", false);
+        //end-shared-preferences
+
+        removed_countries = new ArrayList<>();
+        if(remember == true) {
+            for(Country country : allcountries) {
+                if(!removed_countries.contains(country))
+                    countriesTemp.add(country);
+            }
+        }
+        else {
+            //shared-preferences
+            SharedPreferences.Editor editor = prefManager.edit();
+            editor.clear();
+            editor.commit();
+            //end-shared-preferences
+        }
         return new ViewHolder(viewCountry);
     }
 
@@ -41,25 +65,18 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Country country = allcountries.get(position);
-        holder.countryName.setText(country.getName());
-        holder.countryPopulation.setText(country.getShorty());
-        holder.countryFlag.setImageResource(context.getResources().getIdentifier(country.flag,"drawable",context.getPackageName()));
+        countryPos = allcountries.get(position);
+        holder.countryName.setText(countryPos.getName());
+        holder.countryPopulation.setText(countryPos.getShorty());
+        holder.countryFlag.setImageResource(context.getResources().getIdentifier(countryPos.flag,"drawable",context.getPackageName()));
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                //raw-file
-                //model.writeData(model.getCountry().getValue().get(position).getName());
-                //end-raw-file
+                // shared-preferences
+                removed_countries.add(String.valueOf(countryPos));
+                // end-shared-preferences
 
-                //shared-preferences
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(country.getName(), country.getName());
-                editor.commit();
-                //end-shared-preferences
-
-                allcountries.remove(country);
+                allcountries.remove(countryPos);
                 notifyDataSetChanged();
                 return true;
             }

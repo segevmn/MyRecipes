@@ -23,18 +23,13 @@ public class MainActivity extends AppCompatActivity implements CountryFragment.C
         switch (item.getItemId())
         {
             case R.id.setting:
-                settingDialog exampleD = new settingDialog();
-                exampleD.show(getSupportFragmentManager(), "example dialog");
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(android.R.id.content, new setting())
+                        .addToBackStack("BBB")
+                        .commit();
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void apply() {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(android.R.id.content, new setting())
-                .addToBackStack(null)
-                .commit();
     }
 }

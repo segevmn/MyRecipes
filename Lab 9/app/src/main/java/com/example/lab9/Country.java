@@ -34,8 +34,8 @@ public class Country {
 	public Country(String name, String flag, String shorty) {
 		this.name = name;
 		this.flag = flag;
-		this.shorty=shorty;
-		this.details="";
+		this.shorty = shorty;
+		this.details = "";
 	}
 
 	public String getAnthem() {
@@ -51,7 +51,7 @@ public class Country {
 	}
 
 	public void setDetails(String details) {
-		this.details=details;
+		this.details = details;
 	}
 
 	public String getDetails() {
@@ -59,7 +59,7 @@ public class Country {
 	}
 
 	public int compare(Country other) {
-		return  this.name.compareTo(other.name);
+		return this.name.compareTo(other.name);
 	}
 
 	@Override

@@ -30,9 +30,9 @@ public class CountryXMLParser {
 		        String inTag = "";
 		        String strTagText = null;
 		
-		        while (eventType != XmlPullParser.END_DOCUMENT){
+		        while (eventType != XmlPullParser.END_DOCUMENT) {
 		        	inTag = parser.getName();
-		            switch (eventType){
+		            switch (eventType) {
 		                case XmlPullParser.START_DOCUMENT:
 		                	data = new ArrayList<Country>();
 		                    break;
@@ -69,7 +69,7 @@ public class CountryXMLParser {
 
 	private static InputStream openCountriesFile(Context context) {
 		AssetManager assetManager = context.getAssets();
-		InputStream in =null;
+		InputStream in = null;
 		try {
 			in = assetManager.open("countries.xml");
 		} catch (IOException e) {

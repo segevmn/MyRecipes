@@ -20,9 +20,5 @@ public class setting extends PreferenceFragmentCompat implements CountryFragment
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.setBackgroundColor(getResources().getColor(R.color.white));
-        /* rememberCB = (CheckBoxPreference) findPreference ("rememberCB");
-        SharedPreferences sharedPref = getActivity().getSharedPreferences("shared Preferences", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean("rememberCB", rememberCB.isChecked());*/
     }
 }

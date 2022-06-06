@@ -9,43 +9,37 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 
 public class CountryDetailsFragment extends Fragment {
-    CountryDetailsListener listener;
+
     private TextView Details;
+    private  MainViewModel countriesVM;
 
+    @Nullable
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        try {
-            this.listener = (CountryDetailsListener)context;
-        } catch(ClassCastException e) {
-            throw new ClassCastException("the class " +
-                    getActivity().getClass().getName() +
-                    " must implements the interface 'CountryDetailsListener'");
-        }
-        super.onAttach(context);
-    }
-
-    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView (@NonNull LayoutInflater inflater,@Nullable ViewGroup container,@Nullable Bundle savedInstanceState) {
         return  inflater.inflate(R.layout.country_details_fragment, container, false);
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view,@Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.Details = (TextView) view.findViewById(R.id.countryDetails);
+        countriesVM =MainViewModel.getInstance(getActivity().getApplication(),getContext(),getActivity());
+        Observer<Country> updateCountriesList = new Observer<Country>() {
+            @Override
+            public void onChanged(Country country) {
+                String detailsSelectedCountry;
+                if(country!=null){
+                    detailsSelectedCountry=country.getDetails();
+                    ((TextView)view.findViewById(R.id.countryDetails)).setText(detailsSelectedCountry.trim().replaceAll("  +", ""));
+                }
+                else Details.setText(" ");
+            }
+        };
+        countriesVM.getItemSelected().observe(getViewLifecycleOwner(),updateCountriesList);
     }
 
-    public void details (Country country){
-        Details.setText(country.getDetails());
-    }
 
-    public  interface CountryDetailsListener {
-
-    }
 }

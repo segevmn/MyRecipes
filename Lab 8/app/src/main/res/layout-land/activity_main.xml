@@ -7,18 +7,15 @@
     android:layoutDirection="ltr"
     android:padding="10dp"
     tools:context=".MainActivity">
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/FragCountry"
-        Class="com.example.lab8.CountryFragment"
-        tools:layout="@layout/fragmentcountry"
+    <RelativeLayout
         android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:layout_marginRight="460dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/FragCountry"
+            android:name="com.example.lab8.CountryFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragContainer"

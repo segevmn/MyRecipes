@@ -15,11 +15,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -31,8 +33,9 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     public static AdapterListener adapterListener;
     SharedPreferences prefManager;
     SharedPreferences.Editor editor;
-    private static String filePath;
-    public static final String fileName = "remove_countries.txt";
+    FileOutputStream FileOutput;
+    FileInputStream FileInput;
+    String FileName = "";
 
     public CountryAdapter(AdapterListener adapterListener, Context context, ArrayList<Country> allcountries) {
         this.adapterListener = adapterListener;
@@ -47,60 +50,44 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View viewCountry = inflater.inflate(R.layout.row_item,parent,false);
         countriesTemp = new ArrayList<Country>();
-
+        String line;
         boolean remember = prefManager.getBoolean("rememberCB", false);
-        filePath = context.getFilesDir().getAbsolutePath();
         removed_countries = new ArrayList<>();
 
         //raw-file
-        StringBuilder text = null;
-        String line;
-
-        //Get the text file
-        File file = new File(filePath, File.separator + fileName);
-
         try {
-            if(!file.exists())
-                file.createNewFile();
+            FileInput = context.openFileInput(String.valueOf(FileInput));
+            ByteBuffer bf = ByteBuffer.allocate(500);
+            InputStreamReader inputStreamReader = new InputStreamReader(FileInput);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-            //read text from file
-            InputStream inputStream = new FileInputStream(file);
-            text = new StringBuilder();
-            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = br.readLine()) != null){
-                text.append(line);
-                text.append('\n');
+            while ((line = bufferedReader.readLine()) != null) {
+                removed_countries.add(line);
             }
+            FileInput.close();
+            inputStreamReader.close();
 
-            inputStream.close();
-            br.close();
+            if(remember == true) {
+                for(Country country : allcountries) {
+                    if(!removed_countries.contains(country)) {
+                        FileInput.read(bf.array());
+                        countriesTemp.add(country);
+                    }
+                }
+                allcountries.addAll(countriesTemp);
+            }
+            else {
+                FileOutput.write(("".getBytes()));
+                FileOutput.close();
+                removed_countries.clear();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
         //end-raw-file
 
-        if(remember == true) {
-            for(Country country : allcountries) {
-                if(!removed_countries.contains(country))
-                    countriesTemp.add(country);
-            }
-        }
-        else {
-            /*//shared-preferences
-            editor.clear();
-            editor.commit();
-            //end-shared-preferences*/
-
-            //raw-file
-            try{
-                FileOutputStream writer = new FileOutputStream(filePath+ File.separator + fileName);
-                writer.write(("".getBytes()));
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            //end-raw-file
-        }
         return new ViewHolder(viewCountry);
     }
 
@@ -120,25 +107,15 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                /*//shared-preferences
-                editor.putString(countryPos.getName(), countryPos.getName());
-                editor.commit();
-                //end-shared-preferences*/
-
                 //raw-file
-                File directory = new File(filePath);
-                if(!directory.exists())
-                    directory.mkdir();
-                File newFile = new File(filePath, File.separator + fileName);
                 try {
-                    if(!newFile.exists())
-                        newFile.createNewFile();
-
-                    FileOutputStream fout = new FileOutputStream(newFile, true);
-                    OutputStreamWriter outputWriter = new OutputStreamWriter(fout);
-                    outputWriter.write(countryPos.getName() + "\n");
+                    FileOutput = context.openFileOutput(FileName, context.MODE_PRIVATE);
+                    ByteBuffer bf = ByteBuffer.allocate(500);
+                    OutputStreamWriter outputWriter = new OutputStreamWriter(FileOutput);
+                    outputWriter.write(countryPos.getName().getBytes()+"\n");
                     outputWriter.close();
-                }catch (Exception e) {
+                    removed_countries.add(countryPos.getName());
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
                 //end-raw-file

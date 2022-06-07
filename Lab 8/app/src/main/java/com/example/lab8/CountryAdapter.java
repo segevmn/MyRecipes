@@ -25,13 +25,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     Context context;
     Application application;
 
-
     public CountryAdapter(Application application, Context context, Activity activity) {
-        countriesView= MainViewModel.getInstance(application,context,activity);
-        this.allcountries=countriesView.getCountryData().getValue();
+        countriesView = MainViewModel.getInstance(application,context,activity);
+        this.allcountries = countriesView.getCountryData().getValue();
         this.context = context;
         this.application = application;
-
     }
 
     @Override
@@ -50,11 +48,12 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
                 SelectedCountryIndex = countryindex;
             }
         };
+
         countriesView.getIndex().observe((LifecycleOwner)context,observeselectedCountryIndex);
-        if (SelectedCountryIndex==position){
+        if (SelectedCountryIndex==position)
             holder.itemView.setBackgroundColor(Color.WHITE);
-        }
-        else holder.itemView.setBackgroundColor(Color.parseColor("#00DDFF"));
+        else
+            holder.itemView.setBackgroundColor(Color.parseColor("#00DDFF"));
 
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -62,13 +61,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
                 int countryPosition = holder.getAdapterPosition();
                 allcountries.remove(countryPosition);
                 countriesView.setCountryData(allcountries);
-                if(countryPosition < SelectedCountryIndex)
-                {
+                if(countryPosition < SelectedCountryIndex) {
                     SelectedCountryIndex--;
                     countriesView.setIndex(SelectedCountryIndex);
                 }
-                else if (countryPosition == SelectedCountryIndex)
-                {
+                else if (countryPosition == SelectedCountryIndex) {
                     SelectedCountryIndex = RecyclerView.NO_POSITION;
                     countriesView.setItemSelected(null);
                     countriesView.setIndex(RecyclerView.NO_POSITION);
@@ -77,6 +74,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
                 return true;
             }
         });
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,8 +85,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
                 countriesView.setIndex(SelectedCountryIndex);
                 CountryDetailsFragment fragDetails;
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                if (activity.getResources().getConfiguration() .orientation == Configuration.ORIENTATION_PORTRAIT)
-                {
+                if (activity.getResources().getConfiguration() .orientation == Configuration.ORIENTATION_PORTRAIT) {
                     fragDetails = new CountryDetailsFragment();
                     activity.getSupportFragmentManager().beginTransaction().add(R.id.fragContainer,fragDetails)
                             .addToBackStack("BBB").commit();
@@ -116,14 +113,12 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
             countryName = (TextView) itemView.findViewById(R.id.countryName);
             countryPopulation = (TextView) itemView.findViewById(R.id.countryPopulation);
             countryFlag = (ImageView) itemView.findViewById(R.id.flag);
-
         }
-        public void  bindCountryData(Country country){
+
+        public void  bindCountryData(Country country) {
             countryName.setText(country.getName());
             countryPopulation.setText(country.getShorty());
             countryFlag.setImageResource(context.getResources().getIdentifier(country.flag,"drawable",context.getPackageName()));
         }
-
     }
-
 }

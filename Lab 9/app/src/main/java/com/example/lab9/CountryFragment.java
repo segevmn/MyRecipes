@@ -25,7 +25,7 @@ public class CountryFragment extends Fragment {
         if (context instanceof CountryListener) {
             listener = (CountryListener) context;
         } else {
-            throw new RuntimeException(context.toString() +
+            throw new RuntimeException(context +
                     " must implements the interface 'CountrySelectListener'");
         }
 

@@ -16,17 +16,16 @@ public class CountryFragment extends Fragment {
     CountryListener listener;
     private RecyclerView CountriesecyclerView;
     private CountryAdapter CAdapter;
-    ArrayList<Country> countriesData=null;
+    ArrayList<Country> countriesData = null;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        countriesData=CountryXMLParser.parseCountries(context);
+        countriesData = CountryXMLParser.parseCountries(context);
         if (context instanceof CountryListener) {
             listener = (CountryListener) context;
         } else {
-            throw new RuntimeException(context +
-                    " must implements the interface 'CountrySelectListener'");
+            throw new RuntimeException(context + " must implements the interface 'CountrySelectListener'");
         }
 
     }

@@ -1,27 +1,38 @@
-package com.example.myrecipes;
+package com.example.myRecipes;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements MenusFragment.MenuListener {
+public class MainActivity extends AppCompatActivity {
+    Button addRecipe;
+    Button viewRecipes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MenuDetailsFragment detailsFragment = (MenuDetailsFragment) getSupportFragmentManager().findFragmentByTag("menudetailsfrag");
-        if((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)){
-            if(detailsFragment != null) {
-                getSupportFragmentManager().beginTransaction().show(detailsFragment).commit();
-            } else {
-                getSupportFragmentManager().beginTransaction()
-                        .add(R.id.frag, MenuDetailsFragment.class, null, "menudetailsfrag")
-                        .addToBackStack("BBB").commit();
-            }
+
+        addRecipe = findViewById(R.id.addButton);
+        viewRecipes = findViewById(R.id.viewButton);
+
+        if (addRecipe != null) {
+            addRecipe.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    add();
+                }
+            });
         }
+    }
+
+    public void add() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.addRecipe, new AddRecipes()).commit();
     }
 }

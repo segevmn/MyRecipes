@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:id="@+id/frag">
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".MainActivity">
 
-    <fragment
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.example.myrecipes.MenusFragment"
-        android:id="@+id/menufrag"
-        tools:layout="@layout/menufragement"/>
+        android:id="@+id/container"
+        android:layout_gravity="center"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/viewButton"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_corner"
+                android:textColor="@color/key_lime"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="המתכונים שלי"
+                android:onClick="this"
+                tools:ignore="OnClick"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_corner"
+                android:textColor="@color/key_lime"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="הוספת מתכון"
+                android:onClick="this"
+                tools:ignore="OnClick"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

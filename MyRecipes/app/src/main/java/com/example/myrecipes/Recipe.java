@@ -1,4 +1,4 @@
-package com.example.myrecipes;
+package com.example.myRecipes;
 
 public class Recipe {
     String Recipe;

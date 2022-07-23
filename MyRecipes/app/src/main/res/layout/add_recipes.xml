@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:text="מצרכים:"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/eggplant" />
 
         <include
             android:id="@+id/prodScroll"
@@ -38,7 +39,8 @@
             android:layout_height="wrap_content"
             android:text="שלבי הכנה:"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/eggplant" />
 
         <include
             android:id="@+id/stepScroll"

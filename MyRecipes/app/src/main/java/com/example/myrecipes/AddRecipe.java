@@ -1,4 +1,4 @@
-package com.example.myrecipes;
+package com.example.myRecipes;
 
 import android.content.Context;
 import android.os.Bundle;

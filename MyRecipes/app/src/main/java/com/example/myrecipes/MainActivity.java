@@ -3,6 +3,8 @@ package com.example.myRecipes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -72,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements AddRecipe.AddReci
             case R.id.exit:
                 exitDialog exitDiag = new exitDialog();
                 exitDiag.show(getSupportFragmentManager(), "exit Dialog");
+                break;
+            case R.id.home:
+                super.onBackPressed();
+                mainLayout.setVisibility(View.VISIBLE);
                 break;
         }
         return super.onOptionsItemSelected(item);

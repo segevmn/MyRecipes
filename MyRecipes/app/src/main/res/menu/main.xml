@@ -9,5 +9,11 @@
             android:id="@+id/exit"
             android:title="Exit"
             app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/home_icon"
+            app:showAsAction="always"/>
     </group>
 </menu>

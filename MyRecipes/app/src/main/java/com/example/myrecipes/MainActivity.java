@@ -1,4 +1,4 @@
-package com.example.myRecipes;
+package com.example.myrecipes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;

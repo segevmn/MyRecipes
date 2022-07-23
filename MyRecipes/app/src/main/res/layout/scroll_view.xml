@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
     android:layout_width="380dp"
     android:layout_height="300dp"
     android:layoutDirection="rtl">
@@ -264,10 +265,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout12">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView12"
@@ -287,10 +288,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout13"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout13">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView13"
@@ -310,10 +311,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout14"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout14">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView14"
@@ -333,10 +334,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout15">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView15"
@@ -356,10 +357,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout16"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout16">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView16"
@@ -379,10 +380,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout17"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout17">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView17"
@@ -402,10 +403,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout18"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout18">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView18"
@@ -425,10 +426,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout19"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout19">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView19"
@@ -448,10 +449,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout20"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout20">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView20"

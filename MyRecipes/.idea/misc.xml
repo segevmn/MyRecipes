@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/drawable-v24/rounded_corner.xml" value="0.13" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/activity_main.xml" value="0.144" />
+        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/add_recipes.xml" value="0.1" />
         <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/scroll_view.xml" value="0.152" />
+        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/view_recipes.xml" value="0.2989583333333333" />
       </map>
     </option>
   </component>

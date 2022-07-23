@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addARecipe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl"
-    android:id="@+id/addRecipe"
-    android:tag="add"
-    tools:context=".AddRecipes">
+    android:layoutDirection="rtl">
 
     <LinearLayout
+        android:id="@+id/addLayout"
         android:layout_width="380dp"
         android:layout_height="700dp"
-        android:orientation="vertical"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textViewProd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="מצרכים:"
-            android:textStyle="bold"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-        <include layout="@layout/scroll_view"/>
+        <include
+            android:id="@+id/prodScroll"
+            layout="@layout/scroll_view" />
 
         <Space
+            android:id="@+id/addSpace"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="30dp" />
 
         <TextView
             android:id="@+id/textViewStep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="שלבי הכנה:"
-            android:textStyle="bold"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-        <include layout="@layout/scroll_view"/>
+        <include
+            android:id="@+id/stepScroll"
+            layout="@layout/scroll_view" />
     </LinearLayout>
+
 </FrameLayout>

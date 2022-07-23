@@ -1,17 +1,15 @@
 package com.example.myRecipes;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
-import android.content.res.Configuration;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AddRecipe.AddRecipesListener, ViewRecipes.ViewRecipesListener {
+    LinearLayout mainLayout;
     Button addRecipe;
     Button viewRecipes;
 
@@ -20,19 +18,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mainLayout = findViewById(R.id.mainLayout);
         addRecipe = findViewById(R.id.addButton);
         viewRecipes = findViewById(R.id.viewButton);
 
         if (addRecipe != null) {
-            addRecipe.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    add();
-                }
-            });
+            addRecipe.setOnClickListener(v -> addRecipe());
+        }
+        if (viewRecipes != null) {
+            viewRecipes.setOnClickListener(v -> viewRecipes());
         }
     }
 
-    public void add() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.addRecipe, new AddRecipes()).commit();
+    public void addRecipe() {
+        Fragment addFragment = new AddRecipe();
+        FragmentTransaction addTransaction = getSupportFragmentManager().beginTransaction();
+        addTransaction.replace(R.id.mainFrameLayout, addFragment);
+        addTransaction.addToBackStack(null);
+        addTransaction.commit();
+
+        mainLayout.setVisibility(View.GONE);
+    }
+
+    public void viewRecipes() {
+        Fragment viewFragment = new ViewRecipes();
+        FragmentTransaction viewTransaction = getSupportFragmentManager().beginTransaction();
+        viewTransaction.replace(R.id.mainFrameLayout, viewFragment);
+        viewTransaction.addToBackStack(null);
+        viewTransaction.commit();
+
+        mainLayout.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        mainLayout.setVisibility(View.VISIBLE);
     }
 }

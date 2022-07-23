@@ -11,13 +11,15 @@
     tools:context=".MainActivity">
 
     <FrameLayout
+        android:id="@+id/mainFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/container"
         android:layout_gravity="center"
-        android:gravity="center">
+        android:gravity="center"
+        tools:ignore="UselessParent">
 
         <LinearLayout
+            android:id="@+id/mainLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -33,10 +35,10 @@
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:text="המתכונים שלי"
-                android:onClick="this"
                 tools:ignore="OnClick"/>
 
             <Space
+                android:id="@+id/mainSpace"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
 
@@ -49,7 +51,6 @@
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:text="הוספת מתכון"
-                android:onClick="this"
                 tools:ignore="OnClick"/>
         </LinearLayout>
     </FrameLayout>

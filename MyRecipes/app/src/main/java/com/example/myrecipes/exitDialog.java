@@ -19,7 +19,7 @@ public class exitDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        final View view = inflater.inflate(R.layout.exitmenu, null);
+        final View view = inflater.inflate(R.layout.exit_menu, null);
 
         builder.setView(view)
                 .setTitle("Closing the application")

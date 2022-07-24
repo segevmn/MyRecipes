@@ -1,6 +1,5 @@
 package com.example.myRecipes;
 
-import android.app.Application;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
-    Application application;
     Context context;
     ArrayList<Recipe> myRecipes;
 
@@ -19,10 +17,11 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         this.context = context;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View viewRecipe = inflater.inflate(R.layout.recipe,parent,false);
+        View viewRecipe = inflater.inflate(R.layout.recipe_item,parent,false);
         return new ViewHolder(viewRecipe);
     }
 
@@ -31,7 +30,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
        Recipe recipe = myRecipes.get(position);
        holder.recipeName.setText(recipe.getRecipe());
        holder.dishSize.setText(recipe.getDishSize());
-       holder.recipeProgress.setText(recipe.getRecipeProgress());
     }
 
     @Override
@@ -39,18 +37,16 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         return 0;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView recipeName;
         public TextView dishSize;
-        public TextView recipeProgress;
         View itemView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.itemView = itemView;
-            recipeName = (TextView) itemView.findViewById(R.id.RecipeName);
-            dishSize = (TextView) itemView.findViewById(R.id.DishSize);
-            recipeProgress = (TextView) itemView.findViewById(R.id.progress);
+            recipeName = itemView.findViewById(R.id.RecipeName);
+            dishSize = itemView.findViewById(R.id.DishSize);
         }
     }
 }

@@ -15,23 +15,79 @@
         android:layout_marginBottom="15dp"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="שם המתכון:"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:inputType="text"/>
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/addSpace1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:id="@+id/sizeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="כמות מנות:"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/sizeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/addSpace2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
             android:id="@+id/textViewProd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="מצרכים:"
             android:textSize="25dp"
-            android:textStyle="bold"
-            android:textColor="@color/eggplant" />
+            android:textStyle="bold" />
 
         <include
             android:id="@+id/prodScroll"
             layout="@layout/scroll_view" />
 
         <Space
-            android:id="@+id/addSpace"
+            android:id="@+id/addSpace3"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="10dp" />
 
         <TextView
             android:id="@+id/textViewStep"
@@ -39,12 +95,25 @@
             android:layout_height="wrap_content"
             android:text="שלבי הכנה:"
             android:textSize="25dp"
-            android:textStyle="bold"
-            android:textColor="@color/eggplant" />
+            android:textStyle="bold" />
 
         <include
             android:id="@+id/stepScroll"
             layout="@layout/scroll_view" />
-    </LinearLayout>
 
+        <Space
+            android:id="@+id/addSpace4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שמירה"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+    </LinearLayout>
 </FrameLayout>

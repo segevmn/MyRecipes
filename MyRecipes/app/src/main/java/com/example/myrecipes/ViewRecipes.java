@@ -52,12 +52,11 @@ public class ViewRecipes extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState){
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         MAdapter = new MenuAdapter(getActivity());
         menus.setAdapter(MAdapter);
         menus.setLayoutManager(new LinearLayoutManager(getActivity()));
-
     }
 
     public interface ViewRecipesListener {

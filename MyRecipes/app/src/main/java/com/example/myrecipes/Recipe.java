@@ -3,7 +3,6 @@ package com.example.myRecipes;
 public class Recipe {
     String Recipe;
     Integer dishSize;
-    String recipeProgress;
 
     public String getRecipe() {
         return Recipe;
@@ -19,13 +18,5 @@ public class Recipe {
 
     public void setDishSize(Integer dishSize) {
         this.dishSize = dishSize;
-    }
-
-    public String getRecipeProgress() {
-        return recipeProgress;
-    }
-
-    public void setRecipeProgress(String recipeProgress) {
-        this.recipeProgress = recipeProgress;
     }
 }

@@ -8,5 +8,5 @@
         android:color="@color/eggplant" />
 
     <corners
-        android:radius="10dp" />
+        android:radius="30dp" />
 </shape>

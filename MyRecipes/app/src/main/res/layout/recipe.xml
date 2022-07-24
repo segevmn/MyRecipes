@@ -1,37 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Recipe"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="91dp"
-        android:orientation="vertical"
-        android:background="@color/mandarin"
-        android:layout_marginBottom="2dp">
+        android:id="@+id/recipeLayout"
+        android:layout_width="380dp"
+        android:layout_height="700dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
 
-
-        <TextView
-            android:id="@+id/RecipeName"
+        <EditText
+            android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="TextView" />
+            android:inputType="text"
+            android:textSize="25dp" />
 
-        <TextView
-            android:id="@+id/DishSize"
+        <Space
+            android:id="@+id/addSpace1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:id="@+id/sizeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="TextView" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="כמות מנות:"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/sizeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/addSpace2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
-            android:id="@+id/progress"
+            android:id="@+id/textViewProd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="TextView" />
+            android:text="מצרכים:"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
+        <include
+            android:id="@+id/prodScroll"
+            layout="@layout/scroll_check" />
+
+        <Space
+            android:id="@+id/addSpace3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textViewStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שלבי הכנה:"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <include
+            android:id="@+id/stepScroll"
+            layout="@layout/scroll_check" />
+
+        <Space
+            android:id="@+id/addSpace4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>

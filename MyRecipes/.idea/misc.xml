@@ -3,17 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/drawable-v24/rounded_corner.xml" value="0.13" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/add_recipes.xml" value="0.16" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/exitmenu.xml" value="0.2989583333333333" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/recipe.xml" value="0.2" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/recipe_item.xml" value="0.2989583333333333" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/scroll_check.xml" value="0.16" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/scroll_view.xml" value="0.152" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/layout/view_recipes.xml" value="0.2" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/menu/main.xml" value="0.2989583333333333" />
-        <entry key="..\:/Users/yadik/OneDrive/Desktop/GitHub/Android_Development/MyRecipes/app/src/main/res/menu/menu.xml" value="0.2989583333333333" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/add_recipes.xml" value="0.21944444444444444" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/exit_menu.xml" value="0.25" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/recipe.xml" value="0.21944444444444444" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/recipe_item.xml" value="0.25" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/scroll_check.xml" value="0.25" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/scroll_view.xml" value="0.25" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/scroll_view_steps.xml" value="0.25" />
+        <entry key="..\:/Room 5/Documents/Orders/Source code/yarden2021/MyRecipes/MyRecipes/app/src/main/res/layout/view_recipes.xml" value="0.2" />
       </map>
     </option>
   </component>

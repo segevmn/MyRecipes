@@ -1,5 +1,6 @@
 package com.example.myRecipes;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -11,12 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ViewRecipes extends Fragment {
     private ViewRecipesListener listener;
     private RecyclerView menus;
     private MenuAdapter MAdapter;
-    ArrayList<Recipe> allRecipes = null;
+    List<Recipe> allRecipes = null;
+    Activity context;
 
     public ViewRecipes() {
 
@@ -42,21 +45,27 @@ public class ViewRecipes extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.view_recipes, container, false);
+        View view = inflater.inflate(R.layout.view_recipes, container, false);
+        context = getActivity();
+
+        allRecipes = new ArrayList<>();
+        menus = view.findViewById(R.id.recycler);
+
+        allRecipes = Utilities.getList(context, "recipeList");
+        menus.setLayoutManager(new LinearLayoutManager(context, RecyclerView.VERTICAL, false));
+        MAdapter = new MenuAdapter(getActivity(), allRecipes);
+        menus.setAdapter(MAdapter);
+        return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        menus = view.findViewById(R.id.recycler);
         super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        MAdapter = new MenuAdapter(getActivity());
-        menus.setAdapter(MAdapter);
-        menus.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     public interface ViewRecipesListener {

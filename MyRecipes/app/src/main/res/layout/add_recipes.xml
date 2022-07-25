@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/addARecipe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl">
+
 
     <LinearLayout
         android:id="@+id/addLayout"
@@ -34,8 +35,8 @@
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:textSize="25dp" />
         </LinearLayout>
 
         <Space
@@ -59,12 +60,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/sizeEditText"
+                android:id="@+id/priceEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:inputType="number"
                 android:textAlignment="center"
-                android:inputType="number"/>
+                android:textSize="25dp" />
         </LinearLayout>
 
         <Space
@@ -99,21 +100,24 @@
 
         <include
             android:id="@+id/stepScroll"
-            layout="@layout/scroll_view" />
+            layout="@layout/scroll_view_steps" />
 
         <Space
             android:id="@+id/addSpace4"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="שמירה"
-            android:background="@drawable/rounded_corner"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="25dp"/>
     </LinearLayout>
-</FrameLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corner"
+        android:text="שמירה"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+</RelativeLayout>

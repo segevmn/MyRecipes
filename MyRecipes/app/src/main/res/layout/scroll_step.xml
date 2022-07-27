@@ -29,7 +29,8 @@
                 android:id="@+id/checkBox_1"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -52,7 +53,8 @@
                 android:id="@+id/checkBox_2"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -75,7 +77,8 @@
                 android:id="@+id/checkBox_3"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -98,7 +101,8 @@
                 android:id="@+id/checkBox_4"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -121,7 +125,8 @@
                 android:id="@+id/checkBox_5"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -144,7 +149,8 @@
                 android:id="@+id/checkBox_6"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -167,7 +173,8 @@
                 android:id="@+id/checkBox_7"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -190,7 +197,8 @@
                 android:id="@+id/checkBox_8"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -213,7 +221,8 @@
                 android:id="@+id/checkBox_9"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -236,7 +245,8 @@
                 android:id="@+id/checkBox_10"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -259,7 +269,8 @@
                 android:id="@+id/checkBox_11"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -276,13 +287,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="12"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_12"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -299,13 +311,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="13"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_13"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -322,13 +335,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="14"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_14"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -345,13 +359,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="15"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_15"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -374,7 +389,8 @@
                 android:id="@+id/checkBox_16"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -391,13 +407,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="17"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_17"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -414,13 +431,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="18"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_18"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -437,13 +455,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="19"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_19"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -460,13 +479,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="20"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_20"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:checked="true"
+                android:layout_weight="1"
+                android:checked="true"
                 android:gravity="start|top"
                 android:textSize="20dp" />
         </LinearLayout>

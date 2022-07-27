@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -35,7 +36,6 @@ public class exitDialog extends AppCompatDialogFragment {
                         listener.exitApp();
                     }
                 });
-
         return builder.create();
     }
 
@@ -50,8 +50,7 @@ public class exitDialog extends AppCompatDialogFragment {
         }
     }
 
-    public interface exitDialogListener
-    {
+    public interface exitDialogListener {
         void exitApp();
     }
 }

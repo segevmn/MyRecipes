@@ -1,14 +1,5 @@
 package com.example.myRecipes;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -20,22 +11,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
+    private static final int Permission_Request_Code = 1;
     LinearLayout mainLayout;
     Button addRecipe;
     Button viewRecipes;
-    private static final int Permission_Request_Code = 1;
     private BroadcastReceiver broad;
 
     @Override
@@ -55,7 +44,7 @@ public class MainActivity extends AppCompatActivity  {
         }
 
         broad = new BroadcastReceiver();
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             Intent intent = new Intent();
             String packageName = getPackageName();
             PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
@@ -65,8 +54,6 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(intent);
             }
         }
-//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BATTERY_STATS) != PackageManager.PERMISSION_GRANTED)
-//            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.BATTERY_STATS}, Permission_Request_Code);
     }
 
     public void addRecipe() {
@@ -103,8 +90,7 @@ public class MainActivity extends AppCompatActivity  {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case R.id.exit:
                 exitDialog exitDiag = new exitDialog();
                 exitDiag.show(getSupportFragmentManager(), "exit Dialog");

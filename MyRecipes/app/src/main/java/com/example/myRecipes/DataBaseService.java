@@ -1,4 +1,4 @@
-package com.example.myRecipes.Service;
+package com.example.myRecipes;
 
 import static android.content.ContentValues.TAG;
 
@@ -19,7 +19,7 @@ import java.util.List;
 
 public class DataBaseService extends SQLiteOpenHelper {
     public static final String DBName = "Recipe_Database";
-    public static final String TABLERECIPE= "Recipe";
+    public static final String TABLERECIPE = "Recipe";
 
     public static final String Col_1 = "RecipeData";
     public static final String Col_2 = "RecipeDataId";
@@ -32,7 +32,7 @@ public class DataBaseService extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // create Recipe of terms
-        db.execSQL(" create table " + TABLERECIPE + "(" + Col_1 + " TEXT,"  + Col_2 + " INTEGER PRIMARY KEY AUTOINCREMENT)");
+        db.execSQL(" create table " + TABLERECIPE + "(" + Col_1 + " TEXT," + Col_2 + " INTEGER PRIMARY KEY AUTOINCREMENT)");
     }
 
     @Override
@@ -41,45 +41,46 @@ public class DataBaseService extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLERECIPE);
         onCreate(db);
     }
+
     // function to add term into database
-    public void AddRecipe(List<Recipe> modelList){
+    public void AddRecipe(List<Recipe> modelList) {
         Gson gson = new Gson();
         String json = gson.toJson(modelList);
-        SQLiteDatabase db=this.getWritableDatabase();
-        ContentValues cv=new ContentValues();
-        cv.put(Col_1,json);
-        long result=  db.insert(TABLERECIPE,null,cv);
-        if(result == -1) {
-            Log.e(TAG,"value not inserted");
-        }else{
-            Log.e(TAG,"value inserted");
-
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(Col_1, json);
+        long result = db.insert(TABLERECIPE, null, cv);
+        if (result == -1) {
+            Log.e(TAG, "value not inserted");
+        } else {
+            Log.e(TAG, "value inserted");
         }
         db.close();
     }
-    //    // function to delete  course data
-    public void DeleteRecipeData(String id){
-        SQLiteDatabase db=this.getReadableDatabase();
-        db.delete(TABLERECIPE,"RecipeDataId=?",new String[]{id});
+
+    // function to delete  course data
+    public void DeleteRecipeData(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.delete(TABLERECIPE, "RecipeDataId=?", new String[]{id});
     }
+
     // function to get data from database
-    public List<Recipe> getRecipeData(){
-        List<Recipe> dataList1=new ArrayList<Recipe>();
+    public List<Recipe> getRecipeData() {
+        List<Recipe> dataList1 = new ArrayList<Recipe>();
         arrayListId.clear();
-        SQLiteDatabase db=this.getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLERECIPE, null, null, null, null, null, null);
         cursor.moveToFirst();
-        while (!cursor.isAfterLast()){
+        while (!cursor.isAfterLast()) {
             Gson gson = new Gson();
             String json = cursor.getString(0);
             arrayListId.add(String.valueOf(cursor.getInt(1)));
             Type type = new TypeToken<List<Recipe>>() {
             }.getType();
-            List<Recipe> dataList = (List<Recipe>) gson.fromJson(json, type);
+            List<Recipe> dataList = gson.fromJson(json, type);
             dataList1.add(new Recipe(dataList));
             cursor.moveToNext();
         }
         return dataList1;
     }
-
 }

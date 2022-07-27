@@ -1,38 +1,33 @@
 package com.example.myRecipes;
 
-import static com.example.myRecipes.Service.DataBaseService.arrayListId;
+import static com.example.myRecipes.DataBaseService.arrayListId;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.myRecipes.Activity.RecipeDetailActivity;
-import com.example.myRecipes.Service.DataBaseService;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ViewRecipes extends Fragment {
+    public static List<Recipe> allRecipes = null;
+    DataBaseService dataBaseService;
     private RecyclerView menus;
     private MenuAdapter MAdapter;
-   public static List<Recipe> allRecipes = null;
-    DataBaseService dataBaseService;
+
     public ViewRecipes() {
 
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,29 +35,32 @@ public class ViewRecipes extends Fragment {
         allRecipes = new ArrayList<>();
         menus = view.findViewById(R.id.recycler);
         menus.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-       //allRecipes = Utilities.getList(context, "recipeList");
-         dataBaseService =new DataBaseService(getContext());
-             getData();
+        //allRecipes = Utilities.getList(context, "recipeList");
+        dataBaseService = new DataBaseService(getContext());
+        getData();
         return view;
     }
-      public void getData(){
-          allRecipes=dataBaseService.getRecipeData();
-          MAdapter = new MenuAdapter();
-          menus.setAdapter(MAdapter);
-          MAdapter.notifyDataSetChanged();
-      }
+
+    public void getData() {
+        allRecipes = dataBaseService.getRecipeData();
+        MAdapter = new MenuAdapter();
+        menus.setAdapter(MAdapter);
+        MAdapter.notifyDataSetChanged();
+    }
+
     public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         List<Recipe> myRecipes;
-        public MenuAdapter(){
+
+        public MenuAdapter() {
             this.myRecipes = allRecipes;
         }
+
         @NonNull
         @Override
         public MenuAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View viewRecipe =   LayoutInflater.from(getContext()).inflate(R.layout.recipe_item,parent,false);
+            View viewRecipe = LayoutInflater.from(getContext()).inflate(R.layout.recipe_item, parent, false);
             return new MenuAdapter.ViewHolder(viewRecipe);
         }
-
 
         @Override
         public void onBindViewHolder(@NonNull MenuAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
@@ -80,8 +78,8 @@ public class ViewRecipes extends Fragment {
             holder.recipeItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                 getContext().startActivity(new Intent(getContext(), RecipeDetailActivity.class)
-                 .putExtra("index",position));
+                    getContext().startActivity(new Intent(getContext(), RecipeDetailActivity.class)
+                            .putExtra("index", position));
                 }
             });
         }
@@ -91,7 +89,7 @@ public class ViewRecipes extends Fragment {
             return myRecipes != null ? myRecipes.size() : 0;
         }
 
-        public  class ViewHolder extends RecyclerView.ViewHolder {
+        public class ViewHolder extends RecyclerView.ViewHolder {
             public TextView recipeName;
             public TextView dishSize;
             View itemView;

@@ -4,10 +4,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layoutDirection="rtl"
-    android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -22,36 +22,36 @@
             android:id="@+id/mainLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/viewButton"
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:background="@drawable/rounded_corner"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="25dp"
                 android:text="המתכונים שלי"
-                tools:ignore="OnClick"/>
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                tools:ignore="OnClick" />
 
             <Space
                 android:id="@+id/mainSpace"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"/>
+                android:layout_height="50dp" />
 
             <Button
                 android:id="@+id/addButton"
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:background="@drawable/rounded_corner"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="25dp"
                 android:text="הוספת מתכון"
-                tools:ignore="OnClick"/>
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                tools:ignore="OnClick" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

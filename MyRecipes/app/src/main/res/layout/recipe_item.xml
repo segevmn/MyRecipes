@@ -8,32 +8,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:orientation="vertical"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/RecipeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:text="djdf"
+            android:layout_marginBottom="15dp"
             android:gravity="start"
+            android:text="djdf"
             android:textColor="@color/black"
-            android:layout_marginBottom="15dp"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/DishSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:text="sncb"
+            android:layout_marginBottom="15dp"
             android:gravity="start"
+            android:text="sncb"
             android:textColor="@color/black"
-            android:layout_marginBottom="15dp"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>

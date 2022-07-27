@@ -8,7 +8,11 @@ public class Recipe {
     List<String> ingredientsList;
     List<String> stepsList;
 
-    public Recipe() {
+    public Recipe(List<com.example.myRecipes.Recipe> dataList) {
+        Recipe = dataList.get(0).getRecipe();
+        this.dishSize = dataList.get(0).getDishSize();
+        this.ingredientsList = dataList.get(0).getIngredientsList();
+        this.stepsList = dataList.get(0).getStepsList();
     }
 
     public Recipe(String recipe, Integer dishSize, List<String> ingredientsList, List<String> stepsList) {

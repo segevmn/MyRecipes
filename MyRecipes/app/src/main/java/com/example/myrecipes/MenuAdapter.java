@@ -8,15 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     Context context;
-    List<Recipe> myRecipes;
+    ArrayList<Recipe> myRecipes;
 
-    public MenuAdapter(Context context, List<Recipe> allRecipes){
+    public MenuAdapter ( Context context ){
         this.context = context;
-        this.myRecipes = allRecipes;
     }
 
     @NonNull
@@ -31,12 +29,12 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
        Recipe recipe = myRecipes.get(position);
        holder.recipeName.setText(recipe.getRecipe());
-       holder.dishSize.setText(String.valueOf(recipe.getDishSize()));
+       holder.dishSize.setText(recipe.getDishSize());
     }
 
     @Override
     public int getItemCount() {
-        return myRecipes != null ? myRecipes.size() : 0;
+        return 0;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

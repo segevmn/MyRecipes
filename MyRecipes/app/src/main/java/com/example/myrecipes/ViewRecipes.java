@@ -1,7 +1,11 @@
 package com.example.myRecipes;
 
+import static com.example.myRecipes.Service.DataBaseService.arrayListId;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,64 +15,95 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.example.myRecipes.Activity.RecipeDetailActivity;
+import com.example.myRecipes.Service.DataBaseService;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ViewRecipes extends Fragment {
-    private ViewRecipesListener listener;
     private RecyclerView menus;
     private MenuAdapter MAdapter;
-    List<Recipe> allRecipes = null;
-    Activity context;
-
+   public static List<Recipe> allRecipes = null;
+    DataBaseService dataBaseService;
     public ViewRecipes() {
 
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        try {
-            this.listener = (ViewRecipesListener)context;
-        } catch(ClassCastException e) {
-            throw new ClassCastException("the class " +
-                    getActivity().getClass().getName() +
-                    " must implements the interface 'ViewRecipesListener'");
-        }
-
-        super.onAttach(context);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.view_recipes, container, false);
-        context = getActivity();
-
         allRecipes = new ArrayList<>();
         menus = view.findViewById(R.id.recycler);
-
-        allRecipes = Utilities.getList(context, "recipeList");
-        menus.setLayoutManager(new LinearLayoutManager(context, RecyclerView.VERTICAL, false));
-        MAdapter = new MenuAdapter(getActivity(), allRecipes);
-        menus.setAdapter(MAdapter);
+        menus.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+       //allRecipes = Utilities.getList(context, "recipeList");
+         dataBaseService =new DataBaseService(getContext());
+             getData();
         return view;
     }
+      public void getData(){
+          allRecipes=dataBaseService.getRecipeData();
+          MAdapter = new MenuAdapter();
+          menus.setAdapter(MAdapter);
+          MAdapter.notifyDataSetChanged();
+      }
+    public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
+        List<Recipe> myRecipes;
+        public MenuAdapter(){
+            this.myRecipes = allRecipes;
+        }
+        @NonNull
+        @Override
+        public MenuAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View viewRecipe =   LayoutInflater.from(getContext()).inflate(R.layout.recipe_item,parent,false);
+            return new MenuAdapter.ViewHolder(viewRecipe);
+        }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-    }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    }
+        @Override
+        public void onBindViewHolder(@NonNull MenuAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+            Recipe recipe = myRecipes.get(position);
+            holder.recipeName.setText(recipe.getRecipe());
+            holder.dishSize.setText(String.valueOf(recipe.getDishSize()));
+            holder.recipeItem.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    dataBaseService.DeleteRecipeData(arrayListId.get(position));
+                    getData();
+                    return true;
+                }
+            });
+            holder.recipeItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                 getContext().startActivity(new Intent(getContext(), RecipeDetailActivity.class)
+                 .putExtra("index",position));
+                }
+            });
+        }
 
-    public interface ViewRecipesListener {
+        @Override
+        public int getItemCount() {
+            return myRecipes != null ? myRecipes.size() : 0;
+        }
 
+        public  class ViewHolder extends RecyclerView.ViewHolder {
+            public TextView recipeName;
+            public TextView dishSize;
+            View itemView;
+            LinearLayout recipeItem;
+
+            public ViewHolder(@NonNull View itemView) {
+                super(itemView);
+                this.itemView = itemView;
+                recipeName = itemView.findViewById(R.id.RecipeName);
+                dishSize = itemView.findViewById(R.id.DishSize);
+                recipeItem = itemView.findViewById(R.id.recipeItem);
+            }
+        }
     }
 }

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl">
 
-
     <LinearLayout
         android:id="@+id/addLayout"
         android:layout_width="380dp"

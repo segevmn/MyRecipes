@@ -4,8 +4,10 @@ import static com.example.myRecipes.ViewRecipes.allRecipes;
 import static java.lang.String.format;
 import static java.lang.String.valueOf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -18,6 +20,8 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
     CheckBox checkBox_1, checkBox_2, checkBox_3, checkBox_4, checkBox_5, checkBox_6, checkBox_7, checkBox_8, checkBox_9, checkBox_10, checkBox_11, checkBox_12, checkBox_13, checkBox_14, checkBox_15, checkBox_16, checkBox_17, checkBox_18, checkBox_19, checkBox_20;
     ProgressBar progressBar;
     int ProgressValue, ProgressMax, IngredientsNum, StepsNum;
+    Button btnstartTimer, btnStoptimer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,8 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
         name = findViewById(R.id.nameEditText);
         size = findViewById(R.id.sizeEditText);
         progress = findViewById(R.id.progressTextView);
+        btnstartTimer = findViewById(R.id.saveButton);
+        btnStoptimer = findViewById(R.id.finishButton);
 
         progressBar = findViewById(R.id.progressBar);
         ProgressValue = 0;
@@ -153,6 +159,21 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
         checkBox_20 = findViewById(R.id.checkBox_20);
         checkBox_20.setChecked(false);
         checkBox_20.setOnClickListener(this);
+
+        btnstartTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startService();
+            }
+        });
+        btnStoptimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopService();
+                Intent intent = new Intent(RecipeDetailActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -583,5 +604,15 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
                 progress.setText(format("%d%%", ProgressValue));
                 break;
         }
+    }
+
+    public void startService(){
+        Intent intent = new Intent(this, RecipeTimerService.class);
+        startService(intent);
+    }
+
+    public void stopService (){
+        Intent intent = new Intent(this, RecipeTimerService.class);
+        stopService(intent);
     }
 }

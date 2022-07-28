@@ -24,12 +24,6 @@
                 android:layout_weight="1"
                 android:text="1"
                 android:textSize="20dp" />
-            <EditText
-                android:id="@+id/amount1"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText1"
@@ -55,13 +49,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount2"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText2"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -83,13 +70,6 @@
                 android:layout_weight="1"
                 android:text="3"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount3"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText3"
@@ -115,13 +95,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount4"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText4"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -143,13 +116,6 @@
                 android:layout_weight="1"
                 android:text="5"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount5"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText5"
@@ -175,13 +141,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount6"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText6"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -203,13 +162,6 @@
                 android:layout_weight="1"
                 android:text="7"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount7"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText7"
@@ -235,13 +187,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount8"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText8"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -263,13 +208,6 @@
                 android:layout_weight="1"
                 android:text="9"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount9"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText9"
@@ -295,13 +233,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount10"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText10"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -323,13 +254,6 @@
                 android:layout_weight="1"
                 android:text="11"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount11"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText11"
@@ -355,13 +279,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount12"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText12"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -383,13 +300,6 @@
                 android:layout_weight="1"
                 android:text="13"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount13"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText13"
@@ -415,13 +325,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount14"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText14"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -443,13 +346,6 @@
                 android:layout_weight="1"
                 android:text="15"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount15"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText15"
@@ -475,13 +371,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount16"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText16"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -505,20 +394,12 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount17"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText17"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="start|top"
                 android:textSize="20dp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -534,13 +415,6 @@
                 android:layout_weight="1"
                 android:text="18"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount18"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText18"
@@ -566,13 +440,6 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/amount19"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
-
-            <EditText
                 android:id="@+id/editText19"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
@@ -594,13 +461,6 @@
                 android:layout_weight="1"
                 android:text="20"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/amount20"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|top"/>
 
             <EditText
                 android:id="@+id/editText20"

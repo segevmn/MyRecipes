@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:textSize="25dp" />
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <Space
             android:id="@+id/addSpace1"
@@ -118,40 +119,17 @@
             android:layout_height="10dp"
             tools:targetApi="ice_cream_sandwich" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_corner"
+            android:text="סיום"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_gravity="center">
-
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/rounded_corner"
-                android:text="טיימר"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <Space
-                android:id="@+id/addSpace6"
-                android:layout_width="20dp"
-                android:layout_height="match_parent"
-                tools:targetApi="ice_cream_sandwich" />
-
-            <Button
-                android:id="@+id/finishButton"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/rounded_corner"
-                android:text="סיום"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 </FrameLayout>

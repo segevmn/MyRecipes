@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.myRecipes.Recipe;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

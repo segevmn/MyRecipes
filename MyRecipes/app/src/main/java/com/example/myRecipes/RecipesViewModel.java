@@ -12,11 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecipesViewModel extends AndroidViewModel {
+    public static RecipesViewModel instance;
     MutableLiveData<ArrayList<Recipe>> recipes;
     MutableLiveData<Integer> index;
     MutableLiveData<Integer> itemSelected;
-    public static  RecipesViewModel instance;
-    public RecipesViewModel(@NonNull Application application, Context context, Activity activity){
+
+    public RecipesViewModel(@NonNull Application application, Context context, Activity activity) {
         super(application);
         MutableLiveData<ArrayList<Recipe>> RecipeLiveData;
         int currentrecipe;
@@ -26,6 +27,13 @@ public class RecipesViewModel extends AndroidViewModel {
         index.setValue(RecyclerView.NO_POSITION);
         ArrayList<Recipe> myRecipes = (ArrayList<Recipe>) ViewRecipes.allRecipes;
         recipes.setValue(myRecipes);
+    }
+
+    public static RecipesViewModel getInstance(Application application, Context context, Activity activity) {
+        if (instance == null) {
+            instance = new RecipesViewModel(application, context, activity);
+        }
+        return instance;
     }
 
     public MutableLiveData<ArrayList<Recipe>> getAllRecipes() {
@@ -50,12 +58,5 @@ public class RecipesViewModel extends AndroidViewModel {
 
     public void setItemSelected(MutableLiveData<Integer> itemSelected) {
         this.itemSelected = itemSelected;
-    }
-
-    public static RecipesViewModel getInstance(Application application, Context context, Activity activity){
-        if(instance == null){
-            instance = new RecipesViewModel(application, context, activity);
-        }
-        return instance;
     }
 }

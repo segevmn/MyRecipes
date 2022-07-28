@@ -20,17 +20,18 @@ public class RecipeTimerService extends Service {
     private Timer recipetimer;
 
     @Override
-    public void onCreate (){
+    public void onCreate() {
         super.onCreate();
     }
+
     @Override
-    public int onStartCommand (Intent intent, int flags, int startId){
+    public int onStartCommand(Intent intent, int flags, int startId) {
         String input = intent.getStringExtra("Recipe Time Remaining:");
         CreateNotificationChannel();
         recipetimer = new Timer(90000, 1000);
         Intent notificationIntent = new Intent(this, RecipeDetailActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this,0, notificationIntent, 0);
-        Notification notification = new NotificationCompat.Builder(this,CHANNEL_ID)
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle("Recipe Timer Service")
                 .setContentText(input)
                 .setContentIntent(pendingIntent)
@@ -40,7 +41,7 @@ public class RecipeTimerService extends Service {
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         recipetimer.cancel();
         super.onDestroy();
     }
@@ -50,7 +51,8 @@ public class RecipeTimerService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
-    private void CreateNotificationChannel (){
+
+    private void CreateNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel serviceChannel = new NotificationChannel(CHANNEL_ID,
                     "Recipe Timer Service Channel",
@@ -59,9 +61,9 @@ public class RecipeTimerService extends Service {
             manager.createNotificationChannel(serviceChannel);
         }
     }
-    public class Timer extends CountDownTimer {
 
-        public Timer (long millis, long countdownInterval){
+    public class Timer extends CountDownTimer {
+        public Timer(long millis, long countdownInterval) {
             super(millis, countdownInterval);
         }
 

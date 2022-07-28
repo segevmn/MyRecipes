@@ -1,5 +1,6 @@
 package com.example.myRecipes;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -105,7 +106,6 @@ public class AddRecipe extends Fragment {
         modelList = new ArrayList<>();
 
         modelList.add(new Recipe(name, size, ingredientsList, recipeStepsList));
-        // Utilities.saveList(context, modelList, "recipeList");
         dataBaseService.AddRecipe(modelList);
         Toast.makeText(context, "Successfully Added", Toast.LENGTH_SHORT).show();
 
@@ -139,6 +139,7 @@ public class AddRecipe extends Fragment {
         recipe19 = editText19.getText().toString();
         recipe20 = editText20.getText().toString();
 
+        // recipe steps
         recipeStep1 = editTextStep1.getText().toString();
         recipeStep2 = editTextStep2.getText().toString();
         recipeStep3 = editTextStep3.getText().toString();
@@ -194,6 +195,7 @@ public class AddRecipe extends Fragment {
         editText19.setText("");
         editText20.setText("");
 
+        // recipe steps
         editTextStep1.setText("");
         editTextStep2.setText("");
         editTextStep3.setText("");
@@ -240,7 +242,8 @@ public class AddRecipe extends Fragment {
         editText18.setText(recipe.getIngredientsList().get(17));
         editText19.setText(recipe.getIngredientsList().get(18));
         editText20.setText(recipe.getIngredientsList().get(19));
-// recipe steps
+
+        // recipe steps
         editTextStep1.setText(recipe.getStepsList().get(0));
         editTextStep2.setText(recipe.getStepsList().get(1));
         editTextStep3.setText(recipe.getStepsList().get(2));
@@ -274,6 +277,7 @@ public class AddRecipe extends Fragment {
         super.onStart();
     }
 
+    @SuppressLint("NewApi")
     @Override
     public void onPause() {
         if (!saveDataStatus) {

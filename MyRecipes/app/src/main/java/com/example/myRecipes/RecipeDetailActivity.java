@@ -22,7 +22,6 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
     int ProgressValue, ProgressMax, IngredientsNum, StepsNum;
     Button btnstartTimer, btnStoptimer;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -166,6 +165,7 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
                 startService();
             }
         });
+
         btnStoptimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -182,17 +182,22 @@ public class RecipeDetailActivity extends AppCompatActivity implements View.OnCl
         Recipe recipe = allRecipes.get(index);
         name.setText(recipe.getRecipe());
         size.setText(valueOf(recipe.getDishSize()));
-        //progress.setText(format("%d%%", ProgressValue));
+        progress.setText(format("%d%%", ProgressValue));
 
-        for (i = recipe.getIngredientsList().size() - 1; i >= 0; i--) {
-            if (recipe.getIngredientsList().get(i).equals(" ")) {
-                IngredientsNum = i + 1;
+        for (i = 0; i <= recipe.getIngredientsList().size() - 1; i++) {
+            if (recipe.getIngredientsList().get(i).isEmpty()) {
+                IngredientsNum = i;
                 break;
             }
         }
 
-        progress.setText(format("%d%%", IngredientsNum));
-        StepsNum = recipe.getStepsList().size();
+        for (i = 0; i <= recipe.getStepsList().size() - 1; i++) {
+            if (recipe.getStepsList().get(i).isEmpty()) {
+                StepsNum = i;
+                break;
+            }
+        }
+
         ProgressMax = IngredientsNum + (StepsNum * 10);
         progressBar.setMax(ProgressMax);
 

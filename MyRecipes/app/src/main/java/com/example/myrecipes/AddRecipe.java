@@ -22,14 +22,17 @@ public class AddRecipe extends Fragment {
     Integer size;
     String recipe1 = "", recipe2 = "", recipe3 = "", recipe4 = "", recipe5 = "", recipe6 = "", recipe7 = "", recipe8 = "", recipe9 = "", recipe10 = "", recipe11 = "", recipe12 = "", recipe13 = "", recipe14 = "", recipe15 = "", recipe16 = "", recipe17 = "", recipe18 = "", recipe19 = "", recipe20 = "";
     String recipeStep1 = "", recipeStep2 = "", recipeStep3 = "", recipeStep4 = "", recipeStep5 = "", recipeStep6 = "", recipeStep7 = "", recipeStep8 = "", recipeStep9 = "", recipeStep10 = "", recipeStep11 = "", recipeStep12 = "", recipeStep13 = "", recipeStep14 = "", recipeStep15 = "", recipeStep16 = "", recipeStep17 = "", recipeStep18 = "", recipeStep19 = "", recipeStep20 = "";
+    Integer amount1, amount2, amount3, amount4, amount5, amount6, amount7, amount8, amount9,amount10, amount11, amount12, amount13, amount14, amount15, amount16, amount17, amount18, amount19, amount20;
     Activity context;
     List<Recipe> modelList;
     List<String> ingredientsList;
     List<String> recipeStepsList;
+    List<Integer> amountsList;
     DataBaseService dataBaseService;
     boolean saveDataStatus = false;
     EditText nameEditText, sizeEditText, editText1, editText2, editText3, editText4, editText5, editText6, editText7, editText8, editText9, editText10, editText11, editText12, editText13, editText14, editText15, editText16, editText17, editText18, editText19, editText20;
     EditText editTextStep1, editTextStep2, editTextStep3, editTextStep4, editTextStep5, editTextStep6, editTextStep7, editTextStep8, editTextStep9, editTextStep10, editTextStep11, editTextStep12, editTextStep13, editTextStep14, editTextStep15, editTextStep16, editTextStep17, editTextStep18, editTextStep19, editTextStep20;
+    EditText editamount1, editamount2, editamount3, editamount4, editamount5, editamount6, editamount7, editamount8, editamount9, editamount10, editamount11, editamount12, editamount13, editamount14, editamount15, editamount16, editamount17, editamount18, editamount19, editamount20;
     Button btnAddRecipe;
 
     public AddRecipe() {
@@ -91,6 +94,27 @@ public class AddRecipe extends Fragment {
         editTextStep19 = view.findViewById(R.id.editTextStep19);
         editTextStep20 = view.findViewById(R.id.editTextStep20);
 
+        editamount1 = view.findViewById(R.id.amount1);
+        editamount2 = view.findViewById(R.id.amount2);
+        editamount3 = view.findViewById(R.id.amount3);
+        editamount4 = view.findViewById(R.id.amount4);
+        editamount5 = view.findViewById(R.id.amount5);
+        editamount6 = view.findViewById(R.id.amount6);
+        editamount7 = view.findViewById(R.id.amount7);
+        editamount8 = view.findViewById(R.id.amount8);
+        editamount9 = view.findViewById(R.id.amount9);
+        editamount10 = view.findViewById(R.id.amount10);
+        editamount11 = view.findViewById(R.id.amount11);
+        editamount12 = view.findViewById(R.id.amount12);
+        editamount13 = view.findViewById(R.id.amount13);
+        editamount14 = view.findViewById(R.id.amount14);
+        editamount15 = view.findViewById(R.id.amount15);
+        editamount16 = view.findViewById(R.id.amount16);
+        editamount17 = view.findViewById(R.id.amount17);
+        editamount18 = view.findViewById(R.id.amount18);
+        editamount19 = view.findViewById(R.id.amount19);
+        editamount20 = view.findViewById(R.id.amount20);
+
         btnAddRecipe = view.findViewById(R.id.button);
 
         btnAddRecipe.setOnClickListener(v -> {
@@ -105,13 +129,13 @@ public class AddRecipe extends Fragment {
 
         modelList = new ArrayList<>();
 
-        modelList.add(new Recipe(name, size, ingredientsList, recipeStepsList));
+        modelList.add(new Recipe(name, size, ingredientsList, recipeStepsList, amountsList));
         dataBaseService.AddRecipe(modelList);
         Toast.makeText(context, "Successfully Added", Toast.LENGTH_SHORT).show();
 
         clearData();
         addDataIntoList();
-        modelList.add(new Recipe(name, size, ingredientsList, recipeStepsList));
+        modelList.add(new Recipe(name, size, ingredientsList, recipeStepsList, amountsList));
         Utilities.clearSharedPref(context);
         saveDataStatus = true;
     }
@@ -287,7 +311,7 @@ public class AddRecipe extends Fragment {
                 modelList1 = new ArrayList<>();
             }
             addDataIntoList();
-            modelList1.add(new Recipe(name, size, ingredientsList, recipeStepsList));
+            modelList1.add(new Recipe(name, size, ingredientsList, recipeStepsList, amountsList));
             Utilities.saveList(context, modelList1, "recipeList");
         }
         super.onPause();

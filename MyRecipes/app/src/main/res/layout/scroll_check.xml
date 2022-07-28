@@ -25,6 +25,13 @@
                 android:text="1"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount1"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox1"
                 android:layout_width="330dp"
@@ -49,6 +56,13 @@
                 android:layout_weight="1"
                 android:text="2"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount2"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox2"
@@ -75,6 +89,13 @@
                 android:text="3"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount3"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="330dp"
@@ -99,6 +120,13 @@
                 android:layout_weight="1"
                 android:text="4"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount4"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox4"
@@ -125,6 +153,13 @@
                 android:text="5"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount5"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox5"
                 android:layout_width="330dp"
@@ -149,6 +184,13 @@
                 android:layout_weight="1"
                 android:text="6"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount6"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox6"
@@ -175,6 +217,13 @@
                 android:text="7"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount7"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox7"
                 android:layout_width="330dp"
@@ -199,6 +248,13 @@
                 android:layout_weight="1"
                 android:text="8"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount8"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox8"
@@ -225,6 +281,13 @@
                 android:text="9"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount9"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox9"
                 android:layout_width="330dp"
@@ -249,6 +312,13 @@
                 android:layout_weight="1"
                 android:text="10"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount10"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox10"
@@ -275,6 +345,13 @@
                 android:text="11"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount11"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox11"
                 android:layout_width="330dp"
@@ -299,6 +376,13 @@
                 android:layout_weight="1"
                 android:text="12"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount12"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox12"
@@ -325,6 +409,13 @@
                 android:text="13"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount13"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox13"
                 android:layout_width="330dp"
@@ -349,6 +440,13 @@
                 android:layout_weight="1"
                 android:text="14"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount14"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox14"
@@ -375,6 +473,13 @@
                 android:text="15"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount15"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox15"
                 android:layout_width="330dp"
@@ -399,6 +504,13 @@
                 android:layout_weight="1"
                 android:text="16"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount16"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox16"
@@ -425,6 +537,13 @@
                 android:text="17"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount17"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox17"
                 android:layout_width="330dp"
@@ -449,6 +568,13 @@
                 android:layout_weight="1"
                 android:text="18"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount18"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox18"
@@ -475,6 +601,13 @@
                 android:text="19"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/amount19"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox19"
                 android:layout_width="330dp"
@@ -499,6 +632,13 @@
                 android:layout_weight="1"
                 android:text="20"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/amount20"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox20"

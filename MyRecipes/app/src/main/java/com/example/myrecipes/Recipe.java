@@ -7,6 +7,7 @@ public class Recipe {
     Integer dishSize;
     List<String> ingredientsList;
     List<String> stepsList;
+    List<Integer> amountsList;
 
     public Recipe(List<com.example.myRecipes.Recipe> dataList) {
         Recipe = dataList.get(0).getRecipe();
@@ -15,7 +16,7 @@ public class Recipe {
         this.stepsList = dataList.get(0).getStepsList();
     }
 
-    public Recipe(String recipe, Integer dishSize, List<String> ingredientsList, List<String> stepsList) {
+    public Recipe(String recipe, Integer dishSize, List<String> ingredientsList, List<String> stepsList, List<Integer> amountsList) {
         Recipe = recipe;
         this.dishSize = dishSize;
         this.ingredientsList = ingredientsList;

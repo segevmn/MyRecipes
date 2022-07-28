@@ -3,6 +3,9 @@ package com.example.myRecipes;
 import static com.example.myRecipes.DataBaseService.arrayListId;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -43,15 +46,17 @@ public class ViewRecipes extends Fragment {
 
     public void getData() {
         allRecipes = dataBaseService.getRecipeData();
-        MAdapter = new MenuAdapter();
+        MAdapter = new MenuAdapter(getActivity().getApplication(),getContext(),getActivity());
         menus.setAdapter(MAdapter);
         MAdapter.notifyDataSetChanged();
     }
 
     public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         List<Recipe> myRecipes;
+        RecipesViewModel recipesView;
 
-        public MenuAdapter() {
+        public MenuAdapter(Application application, Context context, Activity activity) {
+            recipesView = RecipesViewModel.getInstance(application,context,activity);
             this.myRecipes = allRecipes;
         }
 

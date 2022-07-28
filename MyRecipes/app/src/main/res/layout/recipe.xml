@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Recipe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,7 +26,8 @@
         <Space
             android:id="@+id/addSpace1"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="10dp"
+            tools:targetApi="ice_cream_sandwich" />
 
         <LinearLayout
             android:id="@+id/sizeLayout"
@@ -48,13 +50,15 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:gravity="center_horizontal" />
         </LinearLayout>
 
         <Space
             android:id="@+id/addSpace2"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="10dp"
+            tools:targetApi="ice_cream_sandwich" />
 
         <TextView
             android:id="@+id/textViewProd"
@@ -71,7 +75,8 @@
         <Space
             android:id="@+id/addSpace3"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="10dp"
+            tools:targetApi="ice_cream_sandwich" />
 
         <TextView
             android:id="@+id/textViewStep"
@@ -88,25 +93,30 @@
         <Space
             android:id="@+id/addSpace4"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="10dp"
+            tools:targetApi="ice_cream_sandwich" />
 
         <ProgressBar
             android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="50dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:progressTint="@color/black_olive"
+            android:progressBackgroundTint="@color/mandarin"/>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/progressTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
 
         <Space
             android:id="@+id/addSpace5"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="10dp"
+            tools:targetApi="ice_cream_sandwich" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,7 +139,8 @@
             <Space
                 android:id="@+id/addSpace6"
                 android:layout_width="20dp"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                tools:targetApi="ice_cream_sandwich" />
 
             <Button
                 android:id="@+id/finishButton"
